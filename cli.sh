@@ -6,7 +6,7 @@
 
 # Hardcoded values (move to .env later)
 VPS_USER="derek"
-SITE_DIR="/var/www/derekstevens.net"
+SITE_DIR="/home/derek/derekstevens.net"
 REPO_URL="https://github.com/realderekstevens/derekstevens.net.git"
 NGINX_CONF="/etc/nginx/sites-available/derekstevens.net"
 
