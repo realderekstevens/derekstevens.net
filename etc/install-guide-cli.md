@@ -17,7 +17,7 @@ Add this line at the end under "User privilege specification" (under the root): 
 su - derek
 ```
 
-### Step 5: Install gh (GitHub CLI) via the official method:
+### Step 4: Install gh (GitHub CLI) via the official method:
 ```
 sudo apt install -y gh git
 curl -fsSL https://cli.github.com/packages/githubcli-archive-keyring.gpg | sudo dd of=/usr/share/keyrings/githubcli-archive-keyring.gpg
@@ -25,7 +25,7 @@ echo "deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/githu
 sudo apt update
 ```
 
-### Step 6: Log In to GitHub via gh CLI
+### Step 5: Log In to GitHub via gh CLI
 As main user (derek), authenticate gh with your GitHub account (this enables SSH-like access for repos and embedded links in Hugo):
 ```
 gh auth login
@@ -41,12 +41,12 @@ gh auth status
 ```
 This sets up GitHub integration, so Hugo's "Edit this page" or commit links (if configured) will work via SSH/HTTPS.
 
-### Step 7: Then clone repository
+### Step 6: Then clone repository
 ```
 gh repo clone derekstevens.net /home/derek/derekstevens.net
 ```
 
-### Step 6: Change into the directory (as main user) then give the file modification privlidges for the system
+### Step 7: Change into the directory (as main user) then give the file modification privlidges for the system
 ```
 cd /home/derek/derekstevens.net
 chmod +x cli.sh
