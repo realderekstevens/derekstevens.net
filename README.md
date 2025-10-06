@@ -73,6 +73,9 @@ Add this line at the end: `derek ALL=(ALL:ALL) ALL`. Save and exit.
 CTRL+W  #then hit 'y'
 CTRL+O
 ```
+We need to setup the github authentication:
+```
+```
 
 Then setup certbot
 ```
