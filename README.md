@@ -1,10 +1,12 @@
 https://derekstevens.net
 
-This is a simple website for transcribing historical newspapers, focusing on front pages, articles, 
-and stock market data from key dates (like November 22, 1963, when Kennedy was shot). 
+This is a simple website for transcribing historical newspapers, focusing on front pages, articles, and stock market data from key dates (like November 22, 1963, when Kennedy was shot). 
+
 No ads, no trackers, just pure history. Built with Hugo and the Book theme for a clean, searchable archive.
+
 Submit transcriptions to get credit. Join us to preserve the past!
-Ways to Contribute
+
+Ways to Contribute:
 
 Transcribe a newspaper front page, article, or stock data.
 Add a high-quality image of a newspaper scan (if you have legal access to it).
