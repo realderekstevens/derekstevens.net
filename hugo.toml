@@ -5,15 +5,16 @@ title = 'DerekStevens.net'
 theme = 'hugo-book'
 
 [module]
-[[module.imports]]
-path = 'github.com/alex-shpak/hugo-book'
+  [[module.imports]]
+    path = 'github.com/alex-shpak/hugo-book'
 
 googleAnalytics = 'G-9DDL9X80G8'  # Add your UA-XXXXXXXXX-X if using
 disqusShortname = 'derekstevens'  # Add if using Disqus
 
 disablePathToLower = true
-disableKinds = ['taxonomy']
-[markup]
+disableKinds = ['taxonomy'] # Might need to add 'taxonomyTerm'
+
+[markup] # Required for shortcodes to render HTML safely
   [markup.goldmark]
     [markup.goldmark.renderer]
       unsafe = true
@@ -30,6 +31,13 @@ disableKinds = ['taxonomy']
   BookComments = true  # Enable if adding Disqus
   BookPortableLinks = true # Experimental: Better link handling
   BookServiceWorker = true  # Experimental: Offline support
+
+# Menus (Hugo auto-generates from content structure, but you can override)
+[[menu.main]]
+  identifier = "github"
+  name = "GitHub"
+  url = "https://github.com/realderekstevens/derekstevens.net"
+  weight = 10
 
 # Git integration (for showing edit links and commit info)
 enableGitInfo = true
