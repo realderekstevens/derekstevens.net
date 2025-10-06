@@ -10,7 +10,7 @@ SITE_DIR="/var/www/derekstevens.net"
 REPO_URL="https://github.com/realderekstevens/derekstevens.net.git"
 NGINX_CONF="/etc/nginx/sites-available/derekstevens.net"
 
-# Ensure script is executable: chmod +x bubblegum.sh
+# Ensure script is executable: chmod +x cli.sh
 
 case "$1" in
   setup)
