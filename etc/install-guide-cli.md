@@ -54,5 +54,5 @@ chmod +x cli.sh
 
 ### Step 7: Use the CLI to automate the install process, follow the help guide:
 ```
-./cli.sh
+./cli.sh setup
 ```
