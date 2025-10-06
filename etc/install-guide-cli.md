@@ -4,16 +4,16 @@ Logged in as root:
 useradd -m derek
 passwd derek  # Set a strong password
 ```
-
 This creates a home directory /home/derek.
+
 --
 ## Step 2: Create the main user: 'derek'
 To allow 'derek' to use sudo (needed for some system commands later):
 ```
 visudo
 ```
-
 Add this line at the end: `derek ALL=(ALL:ALL) ALL`. Save and exit (CTRL-W, CTRL-O).
+
 --
 ## Step 3: Install Git and GitHub CLI (gh)
 As derek:
