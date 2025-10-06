@@ -6,15 +6,19 @@ passwd derek  # Set a strong password
 ```
 This creates a home directory /home/derek.
 
-### Step 2: Create the main user: 'derek'
+### Step 2: Enable sudo privlidges
 To allow 'derek' to use sudo (needed for some system commands later):
 ```
 visudo
 ```
-Add this line at the end: `derek ALL=(ALL:ALL) ALL`. Save and exit (CTRL-W, CTRL-O).
+Add this line at the end under sudo privlidges (right under root): `derek ALL=(ALL:ALL) ALL`. Save and exit (CTRL-W, CTRL-O).
 
 ### Step 3: Install Git and GitHub CLI (gh)
-As derek:
+change into the main user (derek):
+```
+su - derek
+```
+then install Github CLI (gh)
 ```
 sudo apt install -y gh
 ```
@@ -44,6 +48,11 @@ gh auth status
 This sets up GitHub integration, so Hugo's "Edit this page" or commit links (if configured) will work via SSH/HTTPS.
 
 ### Step 5: Then clone repository
+```
+gh repo clone derekstevens.net /home/derek/derekstevens.net
+```
+
+### Step 6: Use the cli.sh to automate the install process
 ```
 gh repo clone derekstevens.net /home/derek/derekstevens.net
 ```
