@@ -107,7 +107,7 @@ gh auth status
 ```
 This sets up GitHub integration, so Hugo's "Edit this page" or commit links (if configured) will work via SSH/HTTPS.
 
-### Step 6: Then setup certbot
+### Step 7: Then setup certbot
 ```
 apt install certbot python3-certbot-nginx -y
 certbot --nginx -d derekstevens.net www.derekstevens.net
