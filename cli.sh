@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# bubblegum.sh: Automation script for derekstevens.net setup and updates
+# cli.sh: Automation script for derekstevens.net setup and updates
 # Run as root for setup, as derek for content/update commands
 # Usage: ./bubblegum.sh [setup|update|new-front-page|new-article|new-stock|help]
 
