@@ -1,4 +1,4 @@
-## Step 1: Create the main user: 'derek'
+### Step 1: Create the main user: 'derek'
 Logged in as root:
 ```
 useradd -m derek
@@ -7,7 +7,7 @@ passwd derek  # Set a strong password
 This creates a home directory /home/derek.
 
 --
-## Step 2: Create the main user: 'derek'
+### Step 2: Create the main user: 'derek'
 To allow 'derek' to use sudo (needed for some system commands later):
 ```
 visudo
