@@ -1,6 +1,6 @@
 ### Step-by-Step Setup Guide for Hugo Site with Hugo-Book Theme on Debian 13
 
-This guide assumes you have just provisioned a fresh Debian 13 VPS on Cloudzy and are logged in as the root user via SSH. 
+This guide is how I setup my server; It assumes you have just provisioned a fresh Debian 13 VPS on Cloudzy and are logged in as the root user via SSH. 
 
 We'll proceed sequentially, starting with system basics, user creation, installations, GitHub integration, Hugo setup, web server configuration, email server setup, and SSL. 
 
@@ -112,5 +112,6 @@ This sets up GitHub integration, so Hugo's "Edit this page" or commit links (if 
 apt install certbot python3-certbot-nginx -y
 certbot --nginx -d derekstevens.net www.derekstevens.net
 ```
+
 
 
