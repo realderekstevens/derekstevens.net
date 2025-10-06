@@ -89,7 +89,7 @@ echo "deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/githu
 sudo apt update
 sudo apt install -y gh
 ```
-###Step 6: Log In to GitHub via gh CLI
+### Step 6: Log In to GitHub via gh CLI
 As derek, authenticate gh with your GitHub account (this enables SSH-like access for repos and embedded links in Hugo):
 ```
 gh auth login
