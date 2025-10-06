@@ -5,14 +5,14 @@ useradd -m derek
 passwd derek  # Set a strong password
 ```
 This creates a home directory /home/derek.
-
+--
 ### Step 2: Create the main user: 'derek'
 To allow 'derek' to use sudo (needed for some system commands later):
 ```
 visudo
 ```
 Add this line at the end: `derek ALL=(ALL:ALL) ALL`. Save and exit (CTRL-W, CTRL-O).
-
+--
 ### Step 3: Install Git and GitHub CLI (gh)
 As derek:
 ```
@@ -25,7 +25,8 @@ echo "deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/githu
 sudo apt update
 sudo apt install -y gh
 ```
-### Step 6: Log In to GitHub via gh CLI
+
+### Step 4: Log In to GitHub via gh CLI
 As derek, authenticate gh with your GitHub account (this enables SSH-like access for repos and embedded links in Hugo):
 ```
 gh auth login
