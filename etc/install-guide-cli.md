@@ -6,12 +6,11 @@ passwd derek  # Set a strong password
 ```
 This also creates a home directory /home/derek.
 
-### Step 2: Enable sudo privlidges for main user 'derek'
-To allow 'derek' to use sudo (needed for some system commands later):
+### Step 2: Add more privileges to main user 'derek':
 ```
 visudo
 ```
-Add this line at the end under sudo privlidges (right under root): `derek ALL=(ALL:ALL) ALL`. Save and exit (CTRL-W, CTRL-O).
+Add this line at the end under "User privilege specification" (under the root): `derek ALL=(ALL:ALL) ALL`. Save and exit (CTRL-W, CTRL-O).
 
 ### Step 3: Change into the main user (derek):
 ```
