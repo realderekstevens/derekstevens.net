@@ -52,7 +52,13 @@ This sets up GitHub integration, so Hugo's "Edit this page" or commit links (if 
 gh repo clone derekstevens.net /home/derek/derekstevens.net
 ```
 
-### Step 6: Use the cli.sh to automate the install process
+### Step 6: Change into the directory (as main user) then give the file modification privlidges for the system
 ```
-gh repo clone derekstevens.net /home/derek/derekstevens.net
+cd /home/derek/derekstevens.net
+chmod +x cli.sh
+```
+
+### Step 7: Use the CLI to automate the install process, follow the help guide:
+```
+./cli.sh
 ```
