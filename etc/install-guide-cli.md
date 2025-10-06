@@ -16,16 +16,13 @@ Add this line at the end under "User privilege specification" (under the root): 
 ```
 su - derek
 ```
-### Step 4: Install Git and GitHub CLI (gh)
-```
-sudo apt install -y gh
-```
+
 ### Step 5: Install gh (GitHub CLI) via the official method:
 ```
+sudo apt install -y gh
 curl -fsSL https://cli.github.com/packages/githubcli-archive-keyring.gpg | sudo dd of=/usr/share/keyrings/githubcli-archive-keyring.gpg
 echo "deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/githubcli-archive-keyring.gpg] https://cli.github.com/packages stable main" | sudo tee /etc/apt/sources.list.d/github-cli.list > /dev/null
 sudo apt update
-sudo apt install -y gh
 ```
 
 ### Step 6: Log In to GitHub via gh CLI
