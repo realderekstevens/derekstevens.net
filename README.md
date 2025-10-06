@@ -8,9 +8,9 @@ Submit transcriptions to get credit. Join us to preserve the past!
 
 Ways to Contribute:
 
-Transcribe a newspaper front page, article, or stock data.
-Add a high-quality image of a newspaper scan (if you have legal access to it).
-Fix errors in transcriptions or improve existing content.
+- Transcribe a newspaper front page, article, or stock data.
+- Email me a high-quality image of a newspaper scan (if you have legal access to it).
+- Fix errors in transcriptions or improve existing content.
 
 Rules for Submission
 
