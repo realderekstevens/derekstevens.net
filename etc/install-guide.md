@@ -67,12 +67,8 @@ CTRL+W  #then hit 'y'
 CTRL+O
 ```
 
-### Step 4: Change ownership of file to 'Derek' to abide by him being the one serving it out 
-```
-sudo mkdir -p /var/www/derekstevens.net
-sudo chown derek:derek /var/www/derekstevens.net  # Own it
-cd /var/www/derekstevens.net
-```
+
+
 ### Optional Step: If you are making a brand new hugo website; Use below command. Skip if using pre-existing github entry.
 ```
 hugo new site . --force  # Dot for current dir
@@ -114,11 +110,18 @@ This sets up GitHub integration, so Hugo's "Edit this page" or commit links (if 
 gh repo clone derekstevens.net /var/www/derekstevens.net
 ```
 
+### Step 6.6: Change ownership of file to 'Derek' to abide by him being the one serving it out 
+```
+sudo chown derek:derek /var/www/derekstevens.net  # Own it
+cd /var/www/derekstevens.net
+```
+
 ### Step 7: Then setup certbot
 ```
 apt install certbot python3-certbot-nginx -y
 certbot --nginx -d derekstevens.net www.derekstevens.net mail.derekstevens.net www.mail.derekstevens.net
 ```
+
 
 
 
