@@ -22,14 +22,15 @@ sudo apt install -y git wget curl ufw nginx rsync python3-certbot-nginx
 ```
 This upates the Debian 13 OS to the must recent version and installs the needed git commands.
 
-Then setup the firewall (UFW) to abide by the port for nginx, disable it for now
+### Step 1: setup / disable firewall 
+updateThen setup the firewall (UFW) to abide by the port for nginx, disable it for now
 ```
 ufw allow 'Nginx Full'
 ufw allow OpenSSH
 ufw disable
 ```
 
-### Step 0.5: Install Hugo Extended Libraries directly from Github
+### Step 2: Install Hugo_Extended Library directly from Github
 Logged in as root:
 ```
 cd /tmp
@@ -39,7 +40,7 @@ hugo version
 ```
 This installs the most recent version of Hugo Extended directly to the Debian 13 libraries.
 
-### Step 1: Create the User 'derek'
+### Step 3: Create the User 'derek'
 Logged in as root:
 ```
 useradd -m derek
@@ -52,17 +53,6 @@ Add 'derek' to the www-data group (for Nginx compatibility; first install Nginx 
 groupadd www-data  # If it doesn't exist
 usermod -aG www-data derek
 ```
-```
-sudo mkdir -p /var/www/derekstevens.net
-sudo chown derek:derek /var/www/derekstevens.net  # Own it
-cd /var/www/derekstevens.net
-```
-If you are making a brand new hugo website; Use below command. Skip if using pre-existing github entry.
-```
-hugo new site . --force  # Dot for current dir
-git init
-```
-
 To allow 'derek' to use sudo (needed for some system commands later):
 ```
 visudo
@@ -73,11 +63,25 @@ Add this line at the end: `derek ALL=(ALL:ALL) ALL`. Save and exit.
 CTRL+W  #then hit 'y'
 CTRL+O
 ```
-We need to setup the github authentication:
+
+### Step 4: Change ownership of file to 'Derek' to abide by him being the one serving it out 
+```
+sudo mkdir -p /var/www/derekstevens.net
+sudo chown derek:derek /var/www/derekstevens.net  # Own it
+cd /var/www/derekstevens.net
+```
+### Optional Step: If you are making a brand new hugo website; Use below command. Skip if using pre-existing github entry.
+```
+hugo new site . --force  # Dot for current dir
+git init
+```
+
+
+### Step 5: We need to setup the github authentication:
 ```
 ```
 
-Then setup certbot
+### Step 6: Then setup certbot
 ```
 apt install certbot python3-certbot-nginx -y
 certbot --nginx -d derekstevens.net www.derekstevens.net
