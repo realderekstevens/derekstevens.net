@@ -43,7 +43,7 @@ gh auth status
 ```
 This sets up GitHub integration, so Hugo's "Edit this page" or commit links (if configured) will work via SSH/HTTPS.
 
-#### Step 6.5: Then clone repository
+### Step 5: Then clone repository
 ```
-gh repo clone derekstevens.net /var/www/derekstevens.net
+gh repo clone derekstevens.net /home/derek/derekstevens.net
 ```
