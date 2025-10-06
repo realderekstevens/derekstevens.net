@@ -1,4 +1,6 @@
-### Step-by-Step Setup Guide for Hugo Site with Hugo-Book Theme on Debian 13
+### Step-by-Step Website/Email Server Setup Guide for Hugo Site with Hugo-Book Theme on Debian 13
+
+This guide walks you through setting up a Hugo website with the Hugo Book theme on a fresh Debian 13 (Trixie) VPS hosted by Cloudzy, serving content at derekstevens.net and www.derekstevens.net, with email at mail.derekstevens.net and www.mail.derekstevens.net. The site is designed for transcribing historical newspapers, with content structured as derekstevens.net/YYYY/MM/DD/page_1. It uses Nginx, Postfix/Dovecot for email, and GitHub for content management.
 
 This guide is how I setup my server; It assumes you have just provisioned a fresh Debian 13 VPS on Cloudzy and are logged in as the root user via SSH. 
 
@@ -112,6 +114,7 @@ This sets up GitHub integration, so Hugo's "Edit this page" or commit links (if 
 apt install certbot python3-certbot-nginx -y
 certbot --nginx -d derekstevens.net www.derekstevens.net
 ```
+
 
 
 
