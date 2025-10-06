@@ -2,7 +2,7 @@
 
 # cli.sh: Automation script for derekstevens.net setup and updates
 # Run as root for setup, as derek for content/update commands
-# Usage: ./cli.sh [setup|update|new-front-page|new-article|new-stock|help]
+# Usage: ./cli.sh [setup|update|new-article|new-stock|help]
 
 # Hardcoded values (move to .env later)
 VPS_USER="derek"
