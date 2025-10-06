@@ -140,7 +140,7 @@ EOL
     echo "Enabling firewall..."
     ufw enable
 
-    echo "Setup complete! Run './bubblegum.sh update' as derek to build and deploy."
+    echo "Setup complete! Run './cli.sh update' as derek to build and deploy."
     ;;
 
   update)
@@ -164,7 +164,7 @@ EOL
       exit 1
     fi
     if [ -z "$2" ]; then
-      echo "Usage: ./bubblegum.sh new-front-page YYYY/MM/DD"
+      echo "Usage: ./cli.sh new-front-page YYYY/MM/DD"
       exit 1
     fi
     echo "Creating new front page for $2..."
@@ -180,7 +180,7 @@ EOL
       exit 1
     fi
     if [ -z "$2" ] || [ -z "$3" ]; then
-      echo "Usage: ./bubblegum.sh new-article YYYY/MM/DD article-name"
+      echo "Usage: ./cli.sh new-article YYYY/MM/DD article-name"
       exit 1
     fi
     echo "Creating new article $3 for $2..."
@@ -196,7 +196,7 @@ EOL
       exit 1
     fi
     if [ -z "$2" ] || [ -z "$3" ]; then
-      echo "Usage: ./bubblegum.sh new-stock YYYY/MM/DD stock-report-name"
+      echo "Usage: ./cli.sh new-stock YYYY/MM/DD stock-report-name"
       exit 1
     fi
     echo "Creating new stock page $3 for $2..."
@@ -206,13 +206,13 @@ EOL
     ;;
 
   help|*)
-    echo "Usage: ./bubblegum.sh [command]"
+    echo "Usage: ./cli.sh [command]"
     echo "Commands:"
     echo "  setup           - Run as root: Set up Debian 13 VPS with Hugo, Nginx, email, and cron"
     echo "  update          - Run as derek: Pull Git changes, build site, and fix permissions"
-    echo "  new-front-page  - Run as derek: Create a new front page (e.g., ./bubblegum.sh new-front-page 1963/11/22)"
-    echo "  new-article     - Run as derek: Create a new article (e.g., ./bubblegum.sh new-article 1963/11/22 kennedy-obituary)"
-    echo "  new-stock       - Run as derek: Create a new stock page (e.g., ./bubblegum.sh new-stock 1963/11/22 market-report)"
+    echo "  new-front-page  - Run as derek: Create a new front page (e.g., ./cli.sh new-front-page 1963/11/22)"
+    echo "  new-article     - Run as derek: Create a new article (e.g., ./cli.sh new-article 1963/11/22 kennedy-obituary)"
+    echo "  new-stock       - Run as derek: Create a new stock page (e.g., ./cli.sh new-stock 1963/11/22 market-report)"
     echo "  help            - Show this help message"
     ;;
 esac
