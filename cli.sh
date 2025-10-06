@@ -13,6 +13,22 @@ NGINX_CONF="/etc/nginx/sites-available/derekstevens.net"
 # Ensure script is executable: chmod +x cli.sh
 
 case "$1" in
+  gh-auth)
+    echo "Creating user '$VPS_USER' . . . "
+    useradd -m "$VPS_USER"
+    echo "Enter a password . . . $VPS_USER"
+    passwd $VPS_USER
+    usermod -aG www-data "$VPS_USER"
+    echo "$VPS_USER ALL=(ALL:ALL) ALL" > /etc/sudoers.d/"$VPS_USER"
+    chmod 0440 /etc/sudoers.d/"$VPS_USER"
+    su - $VPS_USER
+    sudo apt install -y gh git
+    curl -fsSL https://cli.github.com/packages/githubcli-archive-keyring.gpg | sudo dd of=/usr/share/keyrings/githubcli-archive-keyring.gpg
+    echo "deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/githubcli-archive-keyring.gpg] https://cli.github.com/packages stable main" | sudo tee /etc/apt/sources.list.d/github-cli.list > /dev/null
+    sudo apt update
+    passwd "$VPS_USER"
+
+case "$1" in
   setup)
     # Step 0: Update system and install basics
     echo "Updating system and installing packages..."
@@ -208,6 +224,7 @@ EOL
   help|*)
     echo "Usage: ./cli.sh [command]"
     echo "Commands:"
+    echo "  gh-auth         - Run as root: 
     echo "  setup           - Run as root: Set up Debian 13 VPS with Hugo, Nginx, email, and cron"
     echo "  update          - Run as derek: Pull Git changes, build site, and fix permissions"
     echo "  new-front-page  - Run as derek: Create a new front page (e.g., ./cli.sh new-front-page 1963/11/22)"
