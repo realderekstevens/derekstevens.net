@@ -1,3 +1,32 @@
 baseURL = 'https://derekstevens.net/'
 languageCode = 'en-us'
-title = 'DerekStevens.Net'
+title = 'DerekStevens.net'
+theme = 'hugo-book'
+
+[module]
+[[module.imports]]
+path = 'github.com/alex-shpak/hugo-book'
+
+googleAnalytics = 'G-9DDL9X80G8'  # Add your UA-XXXXXXXXX-X if using
+disqusShortname = 'derekstevens'  # Add if using Disqus
+
+disablePathToLower = true
+enableGitInfo = true
+disableKinds = ['taxonomy']
+
+[markup.goldmark.renderer]
+  unsafe = true
+
+[params]
+  BookTheme = 'dark'
+  BookToC = true
+  BookLogo = ''  # Add 'logo.png' in /static/ if desired
+  BookFavicon = 'favicon.png'  # Place in /static/
+  BookSection = 'docs'
+  BookRepo = 'https://github.com/realderekstevens/derekstevens.net'  # Update with your GitHub repo
+  BookLastChangeLink = 'https://github.com/yourusername/derekstevens.net/commit/{{ .GitInfo.Hash }}'
+  BookEditLink = 'https://github.com/yourusername/derekstevens.net/edit/main/{{ .Path }}'
+  BookDateFormat = 'January 2, 2006'
+  BookSearch = true
+  BookComments = false  # Enable if adding Disqus
+  BookPortableLinks = true
