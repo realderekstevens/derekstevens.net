@@ -1,162 +1,77 @@
 Derek Stevens Net
-Welcome to Derek Stevens Net, a community-driven project to transcribe and preserve historical newspaper front pages and articles. This site, hosted at derekstevens.net, focuses on archiving newspaper content from significant historical dates, such as the Kennedy assassination on November 22, 1963. Built with Hugo and the Book theme, it offers a clean, searchable interface for researchers, historians, and enthusiasts.
-The site is structured by date (e.g., derekstevens.net/YYYY/MM/DD/page_1), with front pages, articles, and stock market data from newspapers. Contributions are welcome via GitHub to expand our archive.
-Project Goals
+https://derekstevens.net
+This is a simple website for transcribing historical newspapers, focusing on front pages, articles, and stock market data from key dates (like November 22, 1963, when Kennedy was shot). No ads, no trackers, just pure history. Built with Hugo and the Book theme for a clean, searchable archive.
+Submit transcriptions to get credit. Join us to preserve the past!
+Ways to Contribute
 
-Transcribe historical newspaper front pages and articles in Markdown.
-Provide structured data for stock market reports from financial sections.
-Enable community contributions through GitHub pull requests.
-Maintain a fast, static site hosted on a Debian 13 VPS with Nginx.
-Link to a separate insurance services site for business inquiries.
+Transcribe a newspaper front page, article, or stock data.
+Add a high-quality image of a newspaper scan (if you have legal access to it).
+Fix errors in transcriptions or improve existing content.
 
-Tech Stack
+Rules for Submission
 
-Hugo: Static site generator for fast, lightweight pages.
-Hugo Book Theme: Clean, documentation-style theme for readability.
-Nginx: Serves static files on a Cloudzy Debian 13 VPS.
-GitHub: Hosts the repository and manages contributions.
-JSON Data: Stores structured data for stocks and metadata.
-Cron Jobs: Automate content updates by pulling Git changes.
+Model submissions after archetypes in archetypes/ (newspaper-front-page.md, articles.md, stock-numbers.md).
+Place files in content/YYYY/MM/DD/ (e.g., content/1963/11/22/page_1.md for a front page).
+File names use hyphens (-), not underscores or spaces (e.g., kennedy-obituary.md).
+Transcriptions must be accurate and based on real scans (e.g., from newspapers.com or libraries). No fictional content or guesses.
+Include metadata in front matter: pub_date, newspaper, transcriber, etc.
+Don’t include images unless (1) you have permission to use them, and (2) they’re clear and relevant. Images go in static/images/YYYY/MM/DD/ (e.g., static/images/1963/11/22/front-page.webp). Use .webp format, ideally under 100KB. No stock images or low-quality scans.
+Files must end with a newline (\n). Linux does this automatically; Windows users, check your editor.
+If adding stock data, use JSON in data/YYYY/MM/DD/stocks.json or tables in Markdown.
+
+If you mess these up, I’ll close your pull request, and you’ll need to resubmit. I’m not fixing sloppy submissions.
+You can add a JSON file with your info in data/transcribers/your-name.json (e.g., data/transcribers/derek-stevens.json). Include: website, email, or crypto addresses (btc, xmr, eth). See data/transcribers/example.json for a template.
+Tags
+Add tags to your submission’s front matter (e.g., tags = ["newspaper", "kennedy", "1963"]). Reuse existing tags when possible. Use historical for all transcriptions and front-page, article, or stocks for specific types.
+Images
+Images go in static/images/YYYY/MM/DD/ (e.g., static/images/1963/11/22/front-page.webp). Use .webp for small file sizes. Reference images in Markdown with /images/YYYY/MM/DD/filename.webp.
+
+Each front page or article can have one main image.
+Additional images (e.g., for article details) should be numbered: filename-01.webp, filename-02.webp, etc.
+Only include images you’ve legally sourced or scanned yourself. No internet grabs.
 
 Getting Started
-To explore the site locally or contribute, follow these steps.
-Prerequisites
 
-Hugo (Extended version recommended)
-Git
-A text editor (e.g., VS Code, Neovim)
-
-Installation
-
-Clone the Repository:
+Clone the repo:
 git clone https://github.com/realderekstevens/derekstevens.net.git
 cd derekstevens.net
 
 
-Install Submodules (for the Book theme):
+Install Hugo and submodules:
+sudo apt install hugo  # Or download from gohugo.io
 git submodule update --init --recursive
 
 
-Install Hugo (if not already installed):
-
-On Debian/Ubuntu:sudo apt update
-sudo apt install hugo
-
-
-Or download from gohugo.io.
+Create content with Hugo:
+hugo new 1963/11/22/page_1.md  # Front page
+hugo new 1963/11/22/articles/kennedy-obituary.md  # Article
+hugo new 1963/11/22/stocks/market-report.md  # Stock data
 
 
-Run Locally:
+Edit the file, fill in front matter, and add transcription.
+
+Test locally:
 hugo server
 
-Visit http://localhost:1313 to preview the site.
+Check http://localhost:1313/1963/11/22/page_1.
 
-
-Contributing
-We welcome contributions to transcribe newspaper front pages, articles, or stock data. Follow these steps to add content.
-Content Structure
-
-Front Pages: Stored as content/YYYY/MM/DD/page_1.md (e.g., content/1963/11/22/page_1.md).
-Articles: Stored as content/YYYY/MM/DD/articles/article-name.md.
-Stock Data: Stored as content/YYYY/MM/DD/stocks/market-report.md or in data/YYYY/MM/DD/stocks.json.
-URL Format: Content at content/1963/11/22/page_1.md appears at derekstevens.net/1963/11/22/page_1.
-
-Adding Content
-
-Create a New File:Use Hugo to generate content with archetypes:
-hugo new 1963/11/22/page_1.md  # For a front page
-hugo new 1963/11/22/articles/kennedy-obituary.md  # For an article
-hugo new 1963/11/22/stocks/market-report.md  # For stock data
-
-This uses predefined archetypes (archetypes/newspaper-front-page.md, archetypes/articles.md, archetypes/stock-numbers.md) to set metadata.
-
-Edit the File:
-
-Open the generated Markdown file in a text editor.
-Fill in front matter (e.g., pub_date, newspaper, transcriber) and add transcribed content.
-Example front page for November 22, 1963:+++
-date = "2025-10-06T14:00:00Z"
-draft = false
-title = "Front Page - November 22, 1963"
-weight = 1
-tags = ["newspaper", "front-page", "historical", "kennedy", "assassination"]
-categories = ["Newspaper Front Pages"]
-pub_date = "1963-11-22"
-newspaper = "The Dallas Morning News"
-edition = "Late Edition"
-headlines = ["President Kennedy Shot Dead in Dallas Motorcade", "Governor Connally Wounded in Attack"]
-source_url = "https://example.com/dallas-morning-news-1963-11-22"
-transcriber = "Your Name"
-transcription_status = "partial"
-+++
-## Front Page - The Dallas Morning News (1963-11-22)
-*Late Edition*
-### Major Headlines
-{{ range .Params.headlines }}
-- {{ . }}
-{{ end }}
-### Front Page Summary
-President Kennedy was assassinated in Dallas...
-
-
-
-
-Test Locally:
-hugo server
-
-Check the new page at http://localhost:1313/YYYY/MM/DD/page_1.
-
-Commit and Push:
+Submit a pull request:
 git add .
 git commit -m "Add transcription for 1963-11-22 front page"
 git push origin main
 
+Fork the repo if you’re not a collaborator and create a PR on GitHub.
 
-Submit a Pull Request:
-
-Fork the repository if you’re not a collaborator.
-Create a pull request (PR) on GitHub with a clear description of your changes (e.g., “Added transcription for Dallas Morning News, 1963-11-22”).
-Include any notes on transcription challenges or sources.
-
-
-
-Contribution Guidelines
-
-Accuracy: Verify transcriptions against original scans (e.g., from newspapers.com or library archives).
-Format: Use Markdown for text and JSON for structured data (e.g., stock prices).
-Metadata: Fill in all front matter fields, especially pub_date, newspaper, and transcription_status.
-Sources: Provide a source_url to the original scan or archive when possible.
-Images: If including images, place them in static/images/YYYY/MM/DD/ and reference with {{< figure src="/images/YYYY/MM/DD/image.jpg" >}}.
-
-Example Contribution
-To transcribe a new front page:
-
-Run hugo new 1941/12/07/page_1.md.
-Edit content/1941/12/07/page_1.md with headlines and summary from the Pearl Harbor attack coverage.
-Commit and submit a PR.
 
 Deployment
-The site is automatically updated via a cron job on the Debian 13 VPS, pulling changes from this repository. After your PR is merged:
-
-The cron job runs git pull and hugo to rebuild the site.
-Static files are served from /var/www/derekstevens.net via Nginx.
-
-To deploy manually:
-hugo  # Build static files to /public/
-rsync -avz public/ derek@your-vps-ip:/var/www/derekstevens.net/
-
-Additional Notes
-
-Data Storage: Stock data can be stored in data/YYYY/MM/DD/stocks.json for easy parsing in Hugo templates.
-Cron Jobs: The VPS pulls updates every 30 minutes (*/30 * * * * cd ~/sites/derekstevens.net && git pull origin main && hugo --destination /var/www/derekstevens.net).
-Insurance Link: A footer link to an external insurance site is included for business inquiries.
-Contact: For questions, open an issue on GitHub or email info@derekstevens.net.
-
+The site runs on a Debian 13 VPS with Nginx, hosted by Cloudzy. A cron job pulls updates every 30 minutes and rebuilds the site. Once your PR is merged, changes go live automatically.
 License
-This project is licensed under the MIT License. See the LICENSE file for details.
+All content is in the public domain. By submitting, you waive ownership but can take credit in the transcriber field or your data/transcribers/your-name.json file.
+Contact
+Open an issue on GitHub or email info@derekstevens.net for questions.
 
-Built with ❤️ by Derek Stevens and the community.
-
+Preserving history, one page at a time.
+--
 
 
 
