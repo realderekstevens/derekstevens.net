@@ -19,7 +19,7 @@ su - derek
 
 ### Step 5: Install gh (GitHub CLI) via the official method:
 ```
-sudo apt install -y gh
+sudo apt install -y gh git
 curl -fsSL https://cli.github.com/packages/githubcli-archive-keyring.gpg | sudo dd of=/usr/share/keyrings/githubcli-archive-keyring.gpg
 echo "deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/githubcli-archive-keyring.gpg] https://cli.github.com/packages stable main" | sudo tee /etc/apt/sources.list.d/github-cli.list > /dev/null
 sudo apt update
