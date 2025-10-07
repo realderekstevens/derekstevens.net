@@ -1,0 +1,6 @@
+{{ $csv := site.Data.stocks["1929-10-28"] | transform.Unmarshal (dict "targetType" "map") }}
+<table>
+  {{ range $csv }}
+    <tr><td>{{ .Stock }}</td><td>{{ .Close }}</td></tr>
+  {{ end }}
+</table>
