@@ -107,13 +107,24 @@ This sets up GitHub integration, so Hugo's "Edit this page" or commit links (if 
 
 ### Step 6.5: Then clone repository
 ```
-gh repo clone derekstevens.net /var/www/derekstevens.net
+gh repo clone derekstevens.net /home/derek/derekstevens.net
 ```
 
 ### Step 6.6: Change ownership of file to 'Derek' to abide by him being the one serving it out 
 ```
-sudo chown derek:derek /var/www/derekstevens.net  # Own it
-cd /var/www/derekstevens.net
+sudo chown derek:derek /var/www/derekstevens.net
+sudo chown derek:derek /home/derek/derekstevens.net
+cd /home/derek/derekstevens.net
+```
+
+### Step 6.7: Delete Default; Copy/Paste ngnix website files; Link it up
+```
+rm /etc/nginx/sites-available/default
+cp /home/derek/derekstevens.net/etc/nginx/sites-available/derekstevens.net /etc/nginx/sites-available/
+cp /home/derek/derekstevens.net/etc/nginx/sites-available/mail.derekstevens.net /etc/nginx/sites-available/
+ln -s /etc/nginx/sites-available/derekstevens.net /etc/nginx/sites-enabled/
+ln -s /etc/nginx/sites-available/mail.derekstevens.net /etc/nginx/sites-enabled/
+cd /home/derek/derekstevens.net
 ```
 
 ### Step 7: Then setup certbot
@@ -121,6 +132,7 @@ cd /var/www/derekstevens.net
 apt install certbot python3-certbot-nginx -y
 certbot --nginx -d derekstevens.net www.derekstevens.net mail.derekstevens.net www.mail.derekstevens.net
 ```
+
 
 
 
