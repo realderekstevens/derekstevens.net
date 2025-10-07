@@ -1,6 +1,6 @@
 +++
-title = "1929"
-weight = 1929
-bookCollapseSection = true  # Always expand in sidebar
+title = "Companies"
+weight = 3000
+bookCollapseSection = false  # Always expand in sidebar
 +++
-Transcriptions from the year of the stock market crash.
+Index of all the companies we've transcribed so far.
