@@ -129,8 +129,9 @@ ln -s /etc/nginx/sites-available/mail.derekstevens.net /etc/nginx/sites-enabled/
 ### Step 7: Then setup certbot
 ```
 apt install certbot python3-certbot-nginx -y
-certbot --nginx -d derekstevens.net www.derekstevens.net mail.derekstevens.net www.mail.derekstevens.net
+certbot --nginx
 ```
+
 
 
 
