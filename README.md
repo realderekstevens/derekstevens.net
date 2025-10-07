@@ -1,5 +1,7 @@
 https://derekstevens.net
 
+[![Hugo](https://img.shields.io/badge/Hugo-v0.151.0-blue)](https://gohugo.io
+
 This is a simple website for transcribing historical newspapers, focusing on front pages, articles, and stock market data from key dates (like November 22, 1963, when Kennedy was shot). 
 
 No ads, no trackers, just pure history. Built with Hugo and the Book theme for a clean, searchable archive.
