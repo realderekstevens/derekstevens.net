@@ -2,6 +2,7 @@ https://derekstevens.net
 
 [![Hugo](https://img.shields.io/badge/Hugo-v0.151.0-blue)](https://gohugo.io)
 
+'''
 ├── archetypes/                  # Content scaffolds (good for consistency)
 │   ├── articles.md              # Article transcriptions
 │   └── stock-numbers.md         # Stock data pages
@@ -28,6 +29,7 @@ https://derekstevens.net
 ├── config.toml (or hugo.toml)   # Site config (inferred; theme, permalinks, multilingual?)
 ├── README.md                    # Excellent contrib guide (rules, tags, deployment)
 └── .gitignore                   # Likely ignores .env, public/, etc.
+'''
 
 This is a simple website for transcribing historical newspapers, focusing on front pages, articles, and stock market data from key dates (like November 22, 1963, when Kennedy was shot). 
 
