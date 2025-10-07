@@ -121,7 +121,6 @@ cd /home/derek/derekstevens.net
 
 ### Step 6.7: Delete Default; Copy/Paste ngnix website files; Link it up
 ```
-rm /etc/nginx/sites-available/default
 cp /home/derek/derekstevens.net/etc/nginx/sites-available/derekstevens.net /etc/nginx/sites-available/
 cp /home/derek/derekstevens.net/etc/nginx/sites-available/mail.derekstevens.net /etc/nginx/sites-available/
 ln -s /etc/nginx/sites-available/derekstevens.net /etc/nginx/sites-enabled/
@@ -134,6 +133,7 @@ cd /home/derek/derekstevens.net
 apt install certbot python3-certbot-nginx -y
 certbot --nginx -d derekstevens.net www.derekstevens.net mail.derekstevens.net www.mail.derekstevens.net
 ```
+
 
 
 
