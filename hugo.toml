@@ -25,7 +25,7 @@ BookComments = false  # Enable if adding Disqus
 BookPortableLinks = true # Experimental: Better link handling
 BookServiceWorker = true  # Experimental: Offline support
 BookRepo = 'https://github.com/realderekstevens/derekstevens.net'  # Your repo URL
-BookEditPath = 'edit/main/content'  # Path to edit files
+BookEditPath = 'edit/main'  # Path to edit files
 BookLastChangeLink = 'https://github.com/realderekstevens/derekstevens.net/commit/{{ .GitInfo.Hash }}'
 BookEditLink = 'https://github.com/realderekstevens/derekstevens.net/edit/main/{{ .Path }}'
 
