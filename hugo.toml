@@ -5,10 +5,6 @@ theme = 'hugo-book'
 [permalinks]
   "" = "/:year/:month/:day/:slug"
 
-[module]
-  [[module.imports]]
-    path = 'hugo-book'
-
 googleAnalytics = 'G-9DDL9X80G8'  # Add your UA-XXXXXXXXX-X if using
 disqusShortname = 'derekstevens'  # Add if using Disqus
 
