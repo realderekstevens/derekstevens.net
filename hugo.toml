@@ -27,7 +27,7 @@ BookServiceWorker = true  # Experimental: Offline support
 BookRepo = 'https://github.com/realderekstevens/derekstevens.net'  # Your repo URL
 BookEditPath = 'edit/main'  # Path to edit files
 BookLastChangeLink = 'https://github.com/realderekstevens/derekstevens.net/commit/{{ .GitInfo.Hash }}'
-BookEditLink = 'https://github.com/realderekstevens/derekstevens.net/edit/main/{{ .Path }}'
+BookEditLink = 'https://github.com/realderekstevens/derekstevens.net/edit/master/{{ .Path }}'
 
 [languages]
 [languages.en]
