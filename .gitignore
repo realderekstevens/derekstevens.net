@@ -65,5 +65,8 @@ netrwhist
 tags
 [._]*.un~
 
+# Any .pdf file to cut down on size (I doubt Github would appreciate that)
+*.pdf
+
 # Coc configuration directory (optional)
 vim/
