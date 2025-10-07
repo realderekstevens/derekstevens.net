@@ -2,48 +2,36 @@ baseURL = 'https://derekstevens.net/'
 languageCode = 'en-us'
 title = 'DerekStevens.net'
 theme = 'hugo-book'
-[permalinks]
-  "" = "/:year/:month/:day/:slug"
-
 googleAnalytics = 'G-9DDL9X80G8'  # Add your UA-XXXXXXXXX-X if using
 disqusShortname = 'derekstevens'  # Add if using Disqus
-
 disablePathToLower = true
 disableKinds = ['taxonomy'] # Might need to add 'taxonomyTerm'
-
 [markup] # Required for shortcodes to render HTML safely
-  [markup.goldmark]
-    [markup.goldmark.renderer]
-      unsafe = true
-
+[markup.goldmark]
+[markup.goldmark.renderer]
+unsafe = true
 enableGitInfo = true
 
-# Theme-specific params
 [params]
-  BookTheme = 'dark' # or 'light' or 'auto'
-  BookToC = true # Shows table of contents
-  BookLogo = ''  # Add 'logo.png' in /static/ if desired
-  BookFavicon = 'favicon.png'  # Place in /static/
-  BookSection = '*' # Section for 
-  BookDateFormat = 'January 2, 2006'
-  BookSearch = true # Enable flexsearch
-  BookComments = true  # Enable if adding Disqus
-  BookPortableLinks = true # Experimental: Better link handling
-  BookServiceWorker = true  # Experimental: Offline support
-  BookRepo = 'https://github.com/realderekstevens/derekstevens.net'  # Your repo URL
-  BookEditPath = 'edit/main/content'  # Path to edit files
-  BookLastChangeLink = 'https://github.com/realderekstevens/derekstevens.net/commit/{{ .GitInfo.Hash }}'
-  BookEditLink = 'https://github.com/realderekstevens/derekstevens.net/edit/main/{{ .Path }}'
+BookTheme = 'dark' # or 'light' or 'auto'
+BookToC = true # Shows table of contents
+BookLogo = ''  # Add 'logo.png' in /static/ if desired
+BookFavicon = 'favicon.png'  # Place in /static/
+BookSection = 'docs' # Section for
+BookDateFormat = 'January 2, 2006'
+BookSearch = true # Enable flexsearch
+BookComments = true  # Enable if adding Disqus
+BookPortableLinks = true # Experimental: Better link handling
+BookServiceWorker = true  # Experimental: Offline support
+BookRepo = 'https://github.com/realderekstevens/derekstevens.net'  # Your repo URL
+BookEditPath = 'edit/main/content'  # Path to edit files
+BookLastChangeLink = 'https://github.com/realderekstevens/derekstevens.net/commit/{{ .GitInfo.Hash }}'
+BookEditLink = 'https://github.com/realderekstevens/derekstevens.net/edit/main/{{ .Path }}'
 
-# Menus (Hugo auto-generates from content structure, but you can override)
 [[menu.main]]
-  identifier = "github"
-  name = "GitHub"
-  url = "https://github.com/realderekstevens/derekstevens.net"
-  weight = 10
-
-[languages]
-[languages.en]
-  languageName = 'English'
-  contentDir = 'content.en'
-  weight = 1
+identifier = "github"
+name = "GitHub"
+url = "https://github.com/realderekstevens/derekstevens.net"
+weight = 10
+[permalinks]
+"" = "/:year/:month/:day/:slug"
