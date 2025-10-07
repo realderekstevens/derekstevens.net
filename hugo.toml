@@ -7,7 +7,7 @@ theme = 'hugo-book'
 
 [module]
   [[module.imports]]
-    path = 'github.com/alex-shpak/hugo-book'
+    path = 'hugo-book'
 
 googleAnalytics = 'G-9DDL9X80G8'  # Add your UA-XXXXXXXXX-X if using
 disqusShortname = 'derekstevens'  # Add if using Disqus
