@@ -12,7 +12,7 @@ The world's largest private collection of stock market data.
 This is a simple stock market data & newspaper archive where users can submit data here for credit.
 There are no ads, trackers or cookies.
 
-This site is compiled and organized with Hugo, using [this very simple theme](https://github.com/lukesmithxyz/lugo) and [that very awesome theme](https://github.com/alex-shpak/hugo-book).
+This site is compiled and organized with Hugo and the theme [Hugo Book](https://github.com/alex-shpak/hugo-book).
 
 ## Ways to contribute
 
