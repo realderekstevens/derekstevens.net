@@ -3,9 +3,9 @@ title: Introduction
 type: docs
 ---
 
-# Your Stock Forecast Website
+# DerekStevens.net
 
-[http://yourstockforecast.com](http://yourstockforecast.com)
+[http://derekstevens.net](http://derekstevens.net)
 
 The world's largest private collection of stock market data.
 
