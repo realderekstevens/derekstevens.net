@@ -113,6 +113,7 @@ gh repo clone derekstevens.net /home/derek/derekstevens.net
 
 ### Step 6.6: Change ownership of file to 'Derek' to abide by him being the one serving it out 
 ```
+mkdir /var/www/derekstevens.net
 sudo chown derek:derek /var/www/derekstevens.net
 sudo chown derek:derek /home/derek/derekstevens.net
 cd /home/derek/derekstevens.net
@@ -133,6 +134,7 @@ cd /home/derek/derekstevens.net
 apt install certbot python3-certbot-nginx -y
 certbot --nginx -d derekstevens.net www.derekstevens.net mail.derekstevens.net www.mail.derekstevens.net
 ```
+
 
 
 
