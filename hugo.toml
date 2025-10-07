@@ -11,6 +11,8 @@ disableKinds = ['taxonomy'] # Might need to add 'taxonomyTerm'
 [markup.goldmark.renderer]
 unsafe = true
 enableGitInfo = true
+defaultContentLanguage = "en"  # Set English as default
+defaultContentLanguageInSubdir = false  # Avoid /en/ URLs if not needed
 
 [params]
 BookTheme = 'dark' # or 'light' or 'auto'
@@ -30,6 +32,7 @@ BookEditLink = 'https://github.com/realderekstevens/derekstevens.net/edit/main/{
 
 [languages]
 [languages.en]
+title = "DerekStevens.net"
 languageName = 'English'
 contentDir = 'content.en'
 weight = 1
