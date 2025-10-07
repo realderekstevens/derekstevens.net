@@ -13,6 +13,17 @@ NGINX_CONF="/etc/nginx/sites-available/derekstevens.net"
 # Ensure script is executable: chmod +x cli.sh
 
 case "$1" in
+  hugo)
+    echo "deleting everything in /public/"
+    rm -rf /home/derek/derekstevens.net/public/*
+    echo "deleting everything in /var/www/derekstevens.net"
+    rm -rf /var/www/derekstevens.net/*
+    hugo
+    cp * -rf /home/derek/derekstevens.net/public/* /var/www/derekstevens.net
+    echo "Done moving everything over"
+    ;;
+
+case "$1" in
   gh-auth)
     echo "Creating user '$VPS_USER' . . . "
     useradd -m "$VPS_USER"
@@ -27,6 +38,7 @@ case "$1" in
     echo "deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/githubcli-archive-keyring.gpg] https://cli.github.com/packages stable main" | sudo tee /etc/apt/sources.list.d/github-cli.list > /dev/null
     sudo apt update
     passwd "$VPS_USER"
+    ;;
 
 case "$1" in
   setup)
@@ -224,7 +236,8 @@ EOL
   help|*)
     echo "Usage: ./cli.sh [command]"
     echo "Commands:"
-    echo "  gh-auth         - Run as root: 
+    echo "  hugo            - Run as root: refreshes the /public/ directory and moves everything over to web server"
+    echo "  gh-auth         - Run as root:"
     echo "  setup           - Run as root: Set up Debian 13 VPS with Hugo, Nginx, email, and cron"
     echo "  update          - Run as derek: Pull Git changes, build site, and fix permissions"
     echo "  new-front-page  - Run as derek: Create a new front page (e.g., ./cli.sh new-front-page 1963/11/22)"
