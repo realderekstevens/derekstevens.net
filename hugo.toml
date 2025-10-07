@@ -6,13 +6,12 @@ googleAnalytics = 'G-9DDL9X80G8'  # Add your UA-XXXXXXXXX-X if using
 disqusShortname = 'derekstevens'  # Add if using Disqus
 disablePathToLower = true
 disableKinds = ['taxonomy'] # Might need to add 'taxonomyTerm'
+
 [markup] # Required for shortcodes to render HTML safely
 [markup.goldmark]
 [markup.goldmark.renderer]
 unsafe = true
 enableGitInfo = true
-defaultContentLanguage = "en"  # Set English as default
-defaultContentLanguageInSubdir = false  # Avoid /en/ URLs if not needed
 
 [params]
 BookTheme = 'dark' # or 'light' or 'auto'
@@ -34,7 +33,7 @@ BookEditLink = 'https://github.com/realderekstevens/derekstevens.net/edit/main/{
 [languages.en]
 title = "DerekStevens.net"
 languageName = 'English'
-contentDir = 'content.en'
+contentDir = 'content'
 weight = 1
 
 [[menu.main]]
