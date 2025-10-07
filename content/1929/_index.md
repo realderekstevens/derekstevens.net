@@ -1,5 +1,5 @@
 +++
-title = "1929 Newspapers"
+title = "1929"
 weight = 1929
 bookCollapseSection = true  # Always expand in sidebar
 +++
