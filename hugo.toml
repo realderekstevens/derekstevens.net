@@ -17,7 +17,7 @@ BookTheme = 'dark' # or 'light' or 'auto'
 BookToC = true # Shows table of contents
 BookLogo = ''  # Add 'logo.png' in /static/ if desired
 BookFavicon = 'favicon.png'  # Place in /static/
-BookSection = 'docs' # Section for
+BookSection = '*' # Section for
 BookDateFormat = 'January 2, 2006'
 BookSearch = true # Enable flexsearch
 BookComments = true  # Enable if adding Disqus
@@ -27,6 +27,12 @@ BookRepo = 'https://github.com/realderekstevens/derekstevens.net'  # Your repo U
 BookEditPath = 'edit/main/content'  # Path to edit files
 BookLastChangeLink = 'https://github.com/realderekstevens/derekstevens.net/commit/{{ .GitInfo.Hash }}'
 BookEditLink = 'https://github.com/realderekstevens/derekstevens.net/edit/main/{{ .Path }}'
+
+[languages]
+[languages.en]
+languageName = 'English'
+contentDir = 'content.en'
+weight = 1
 
 [[menu.main]]
 identifier = "github"
