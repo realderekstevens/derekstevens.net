@@ -1,9 +1,7 @@
 baseURL = 'https://derekstevens.net/'
 languageCode = 'en-us'
 title = 'DerekStevens.net'
-
 theme = 'hugo-book'
-
 [permalinks]
   "" = "/:year/:month/:day/:slug"
 
@@ -22,6 +20,8 @@ disableKinds = ['taxonomy'] # Might need to add 'taxonomyTerm'
     [markup.goldmark.renderer]
       unsafe = true
 
+enableGitInfo = true
+
 # Theme-specific params
 [params]
   BookTheme = 'dark' # or 'light' or 'auto'
@@ -34,6 +34,10 @@ disableKinds = ['taxonomy'] # Might need to add 'taxonomyTerm'
   BookComments = true  # Enable if adding Disqus
   BookPortableLinks = true # Experimental: Better link handling
   BookServiceWorker = true  # Experimental: Offline support
+  BookRepo = 'https://github.com/realderekstevens/derekstevens.net'  # Your repo URL
+  BookEditPath = 'edit/main/content'  # Path to edit files
+  BookLastChangeLink = 'https://github.com/realderekstevens/derekstevens.net/commit/{{ .GitInfo.Hash }}'
+  BookEditLink = 'https://github.com/realderekstevens/derekstevens.net/edit/main/{{ .Path }}'
 
 # Menus (Hugo auto-generates from content structure, but you can override)
 [[menu.main]]
@@ -41,11 +45,3 @@ disableKinds = ['taxonomy'] # Might need to add 'taxonomyTerm'
   name = "GitHub"
   url = "https://github.com/realderekstevens/derekstevens.net"
   weight = 10
-
-# Git integration (for showing edit links and commit info)
-enableGitInfo = true
-[params]
-  BookRepo = 'https://github.com/realderekstevens/derekstevens.net'  # Your repo URL
-  BookEditPath = 'edit/main/content'  # Path to edit files
-  BookLastChangeLink = 'https://github.com/yourusername/derekstevens.net/commit/{{ .GitInfo.Hash }}'
-  BookEditLink = 'https://github.com/yourusername/derekstevens.net/edit/main/{{ .Path }}'
