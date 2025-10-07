@@ -1,6 +1,7 @@
 {{ $path := .Get 0 }}
 {{ if not $path }}
-  {{ errorf "Missing PDF path in shortcode: {{ .Name }}" }}
+  {{ warnf "Missing PDF path in shortcode on page %s" .Page.RelPermalink }}  {{/* Warns but allows build */}}
+  {{ return }}
 {{ end }}
 
 {{ $resolvedPath := partial "utils/file-path" (dict "page" .Page "path" $path) }}
