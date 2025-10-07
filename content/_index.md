@@ -1,6 +1,4 @@
-# DerekStevens.net
-
-[http://derekstevens.net](http://derekstevens.net)
+# Welcome!
 
 The world's largest private collection of stock market data.
 
