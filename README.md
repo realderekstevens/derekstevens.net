@@ -1,11 +1,3 @@
-DerekStevens.net is an efficient website/shell script that enables you to build upon other's article & quote transcriptions.
-
-### Quickstart Guide:
-```
-curl -LO https://raw.githubusercontent.com/realderekstevens/derekstevens.net/refs/heads/master/cli.sh
-sh cli.sh help
-```
-
 https://derekstevens.net
 
 This is a simple website for transcribing historical newspapers, focusing on front pages, articles, and stock market data from key dates (like November 22, 1963, when Kennedy was shot). 
