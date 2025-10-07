@@ -63,8 +63,9 @@ visudo
 Add this line at the end: `derek ALL=(ALL:ALL) ALL`. Save and exit.
 
 ```
-CTRL+W  #then hit 'y'
 CTRL+O
+y
+CTRL+X
 ```
 
 
@@ -132,6 +133,7 @@ cd /home/derek/derekstevens.net
 apt install certbot python3-certbot-nginx -y
 certbot --nginx -d derekstevens.net www.derekstevens.net mail.derekstevens.net www.mail.derekstevens.net
 ```
+
 
 
 
