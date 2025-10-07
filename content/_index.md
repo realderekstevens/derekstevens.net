@@ -1,8 +1,3 @@
----
-title: Introduction
-type: docs
----
-
 # DerekStevens.net
 
 [http://derekstevens.net](http://derekstevens.net)
