@@ -116,16 +116,14 @@ gh repo clone derekstevens.net /home/derek/derekstevens.net
 mkdir /var/www/derekstevens.net
 sudo chown derek:derek /var/www/derekstevens.net
 sudo chown derek:derek /home/derek/derekstevens.net
-cd /home/derek/derekstevens.net
 ```
 
-### Step 6.7: Delete Default; Copy/Paste ngnix website files; Link it up
+### Step 6.7: Copy/Paste ngnix website files; Link it up
 ```
 cp /home/derek/derekstevens.net/etc/nginx/sites-available/derekstevens.net /etc/nginx/sites-available/
 cp /home/derek/derekstevens.net/etc/nginx/sites-available/mail.derekstevens.net /etc/nginx/sites-available/
 ln -s /etc/nginx/sites-available/derekstevens.net /etc/nginx/sites-enabled/
 ln -s /etc/nginx/sites-available/mail.derekstevens.net /etc/nginx/sites-enabled/
-cd /home/derek/derekstevens.net
 ```
 
 ### Step 7: Then setup certbot
@@ -133,6 +131,7 @@ cd /home/derek/derekstevens.net
 apt install certbot python3-certbot-nginx -y
 certbot --nginx -d derekstevens.net www.derekstevens.net mail.derekstevens.net www.mail.derekstevens.net
 ```
+
 
 
 
