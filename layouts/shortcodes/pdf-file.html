@@ -1,15 +1,9 @@
-{{- /*
-Shortcode to include a PDF file in a page.
+{{ $path := .Get 0 }}
+{{ if not $path }}
+  {{ errorf "Missing PDF path in shortcode: {{ .Name }}" }}
+{{ end }}
 
-@param {string} 0 The path to the PDF file.
+{{ $resolvedPath := partial "utils/file-path" (dict "page" .Page "path" $path) }}
 
-@example {{< pdf "path/to/file.pdf" >}}
-*/ -}}
-
-{{- $path := .Get 0 -}}
-{{- $url := partial "utils/file-path" (dict "page" .Page "path" $path) -}}
-
-
-<div class="hextra-pdf">
-  <iframe src="{{ $url | safeURL }}" width="100%" style="min-height: 32rem;" frameborder="0"></iframe>
-</div>
+<embed src="{{ $resolvedPath }}" type="application/pdf" width="100%" height="600px" />
+<p>If the PDF doesn't load, <a href="{{ $resolvedPath }}" target="_blank">download it here</a>.</p>

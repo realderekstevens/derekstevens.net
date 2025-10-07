@@ -1,0 +1,8 @@
+{{ $page := .page }}
+{{ $path := .path }}
+{{ $file := $page.Resources.Get $path }}
+{{ if $file }}
+  {{ $file.RelPermalink }}
+{{ else }}
+  {{ $path | absURL }}
+{{ end }}
