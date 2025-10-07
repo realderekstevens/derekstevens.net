@@ -1,6 +1,33 @@
 https://derekstevens.net
 
-[![Hugo](https://img.shields.io/badge/Hugo-v0.151.0-blue)](https://gohugo.io
+[![Hugo](https://img.shields.io/badge/Hugo-v0.151.0-blue)](https://gohugo.io)
+
+├── archetypes/                  # Content scaffolds (good for consistency)
+│   ├── articles.md              # Article transcriptions
+│   └── stock-numbers.md         # Stock data pages
+├── content/                     # Markdown content (date-based; multilingual? Not explicit)
+│   └── YYYY/                    # e.g., 1963/
+│       └── MM/                  # e.g., 11/
+│           └── DD/              # e.g., 22/
+│               ├── page_1.md    # Front page (e.g., kennedy-obituary.md)
+│               └── articles/    # Sub-articles
+│                   └── *.md
+├── data/                        # Structured data (expandable for stocks/transcribers)
+│   ├── <YYYY-MM-DD-stocks.csv>  # e.g., 1963-11-22-stocks.csv (stock market data)
+│   └── transcribers/            # Contributor metadata
+│       ├── derek-stevens.json   # Personal links, email, crypto
+│       └── example.json         # Template for submitters
+├── static/                      # Assets (legal scans/PDFs; good for organization)
+│   └── images/                  # Date-specific
+│       └── YYYY/MM/DD/          # e.g., 1963/11/22/
+│           ├── front-page.webp  # Optimized images
+│           ├── filename-01.pdf  # Scans (PDFs referenced in MD)
+│           └── filename-02.webp
+├── themes/                      # Hugo Book theme (vendored submodule)
+│   └── hugo-book/               # Layouts, CSS/JS for docs-style site
+├── config.toml (or hugo.toml)   # Site config (inferred; theme, permalinks, multilingual?)
+├── README.md                    # Excellent contrib guide (rules, tags, deployment)
+└── .gitignore                   # Likely ignores .env, public/, etc.
 
 This is a simple website for transcribing historical newspapers, focusing on front pages, articles, and stock market data from key dates (like November 22, 1963, when Kennedy was shot). 
 
