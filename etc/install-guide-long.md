@@ -114,7 +114,8 @@ gh repo clone derekstevens.net /home/derek/derekstevens.net
 ### Step 6.55: Delete Themes and clone it (don't know how to do this directly through git on clone)
 ```
 rm -rf /home/derek/derekstevens.net/themes/*
-gh repo clone alex-shpak/hugo-book /home/derek/derekstevens.net/themes
+cd /home/derek/derekstevens.net/themes
+gh repo clone alex-shpak/hugo-book
 ```
 
 ### Step 6.6: Change ownership of file to 'Derek' to abide by him being the one serving it out 
@@ -138,6 +139,12 @@ apt install certbot python3-certbot-nginx -y
 certbot --nginx
 ```
 
+### Step 8: Initialize the hugo repository
+```
+cd /home/derek/derekstevens.net
+chmod +x cli.sh
+./cli hugo
+```
 
 
 
