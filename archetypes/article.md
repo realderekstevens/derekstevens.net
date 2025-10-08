@@ -1,49 +1,37 @@
 ---
-date = '{{ .Date }}'
-draft = false
-title = '{{ replace .File.ContentBaseName "-" " " | title }}'
-weight = '{{ .Page }}' # Adjust weight as it appears from top-left down to bottom-right
-tags = ["article", "newspaper", "transcription", "historical"]
-categories = ["Newspaper Articles", "Finance", "USA"]
-pub_date = '{{ .Date }}'    # Original publication date, e.g., '1920-04-20'
-newspaper = "Evening Star"   # E.g., "New York Times"; Make sure not to use 'the' in names because of redundancy in search engine
-author = "Wheeler D Johnson"      # Original author, if known please include middle initial if possible, no period after middle initial
-transcriber = "Derek E Stevens" # Your name or contributor
-transcription_status = "draft"  # Options: draft, partial, complete
-source_url = ""  # Link to scan or archive, if available
-website_page: "01"  # e.g. "03" or "44" make sure to use leading '0' if single digit
-continued_on: "13" # e.g. "13" if the article is continued onto another digital page, please use the pagination of the digital double-digit page and not the referenced (E.g. "A-13" or "B-13")
----
-
-{{ .Params.title }}
-Originally published in {{ .Params.newspaper }} on {{ .Params.pub_date }}
-
-Block quote from the article here.
-
-Transcribed by {{ .Params.transcriber }}. Status: {{ .Params.transcription_status }}
-
-Article Content
-
-Start transcribing the full text here.
-
-Notes: Add transcription notes, context, or issues encountered.
-
-
-
-
-
-
 title: "{{ replace .Name "-" " " | title }}"
 date: {{ .Date }}
 draft: true
-
-
+weight: 10  # Increment for each article in the bundle (e.g., 10, 20)
+pub_date: "{{ now.Format "2006-01-02" }}"  # Original publication date, e.g., '1929-10-28'
+newspaper: "Newspaper Name"  # e.g., "The Evening Star"
+author: "Original Author"  # Original author, if known (include middle initial without period)
+transcriber: "Your Name"  # Credit for transcription
+transcription_status: "draft"  # Options: draft, partial, complete
+source_url: ""  # Link to scan or archive, if available
+original_page: "Page X"  # e.g., "Page 1" or "Continued on Page 14" (use digital pagination, leading zero for single digits)
+continued_on: ""  # e.g., "13" if continued (digital page number)
+parent_page: "/path/to/parent/newspaper-page/"  # Relative link to the parent _index.md (e.g., "/1929/10/28/01/")
+tags: ["article", "historical", "newspaper"]
+categories: ["Newspaper Articles"]
+---
 
 # {{ replace .Name "-" " " | title }}
 
-{{</* hint info */>}}
-Transcriber's Note: Any edits or clarifications.
-{{</* /hint */>}}
+Originally published in {{ .Params.newspaper }} on {{ .Params.pub_date }} by {{ .Params.author }}.
+
+## Back to Parent Page
+[Return to Front Page]({{ .Params.parent_page }})
+
+## Transcription
+Paste the full transcribed text of the article here.
+
+> Block quote from the article here.
+
+Transcribed by {{ .Params.transcriber }}. Status: {{ .Params.transcription_status }}
+
+## Notes
+Add transcription notes, context, or issues encountered.
 
 ## Associated Image (if available)
-{{</* figure src="/static/{{ now.Format "2006/01/02" }}/article-slug.webp" caption="Scan of the article" */>}}
+{{</* figure src="/images/{{ now.Format "2006/01/02" }}/{{ replace .Name "-" "_" | lower }}.webp" caption="Scan of the article" */>}}
