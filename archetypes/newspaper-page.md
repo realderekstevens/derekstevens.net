@@ -20,7 +20,7 @@ categories: ["Newspaper Pages"]
 This is the front page (or section) of the newspaper from [PUB_DATE_PLACEHOLDER].
 
 ## Embedded PDF
-{{</* figure src="{{ .Params.pdf_file }}" caption="PDF scan" */>}}
+{{</* figure src="[PDF_FILE_PLACEHOLDER]" caption="PDF scan" */>}}
 
 ## Associated Articles
 List links to child articles here (Hugo auto-generates menu, but manual for clarity):
@@ -28,5 +28,4 @@ List links to child articles here (Hugo auto-generates menu, but manual for clar
 - [Article 2 Title](/{{ now.Format "2006/01/02" }}/article2/)
 
 <!-- Add transcribed text or summaries from the front page here if needed. Child articles will appear in the sidebar menu due to bookCollapseSection. -->
-
-<!-- Note: Replace [PUB_DATE_PLACEHOLDER] with the actual date after creation. -->
+<!-- Note: After creation, replace [PUB_DATE_PLACEHOLDER] with the value from front matter 'pub_date', and [PDF_FILE_PLACEHOLDER] with 'pdf_file'. -->
