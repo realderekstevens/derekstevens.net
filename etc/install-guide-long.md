@@ -113,8 +113,8 @@ gh repo clone derekstevens.net /home/derek/derekstevens.net
 
 ### Step 6.55: Delete Themes and clone it (don't know how to do this directly through git on clone)
 ```
-rm -rf /home/derek/derekstevens.net/themes/
-gh repo clone alex-shpak/hugo-book /home/derek/derekstevens.net/themes/
+rm -rf /home/derek/derekstevens.net/themes/*
+gh repo clone alex-shpak/hugo-book /home/derek/derekstevens.net/themes
 ```
 
 ### Step 6.6: Change ownership of file to 'Derek' to abide by him being the one serving it out 
@@ -137,6 +137,7 @@ ln -s /etc/nginx/sites-available/mail.derekstevens.net /etc/nginx/sites-enabled/
 apt install certbot python3-certbot-nginx -y
 certbot --nginx
 ```
+
 
 
 
