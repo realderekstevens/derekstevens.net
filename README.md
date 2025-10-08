@@ -1,6 +1,6 @@
 https://derekstevens.net
 
-[![Hugo+extended](https://img.shields.io/badge/Hugo-v0.151.0-blue)](https://gohugo.io) [![Hugo-Book](https://img.shields.io/badge/Hugo_Book-v12-blue)](https://github.com/alex-shpak/hugo-book)
+[![Hugo](https://img.shields.io/badge/Hugo+extended-v0.151.0-blue)](https://gohugo.io) [![Hugo-Book](https://img.shields.io/badge/Hugo_Book-v12-blue)](https://github.com/alex-shpak/hugo-book)
 
 This is a simple website for transcribing historical newspapers, focusing on front pages, articles, and stock market data from key dates (like November 22, 1963, when Kennedy was shot). 
 
