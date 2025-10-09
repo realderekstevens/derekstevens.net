@@ -3,7 +3,7 @@ title: "{{ replace .Name "-" " " | title }}"
 date: {{ .Date }}
 draft: false
 weight: 10
-pub_date: "{{ now.Format "2006-01-02" }}"
+pub_date: "{{ .Date }}"
 newspaper: "Newspaper Name"
 author: "Original Author"
 transcriber: "Your Name"
@@ -18,7 +18,7 @@ type: "article"
 
 # {{ replace .Name "-" " " | title }}
 
-Originally published in **{{ .Params.newspaper }}** on **{{ .Params.pub_date }}**.
+Originally published in **{{ .newspaper }}** on **{{ .pub_date }}**.
 
 [Return to Edition Overview](../)
 
@@ -26,7 +26,7 @@ Originally published in **{{ .Params.newspaper }}** on **{{ .Params.pub_date }}*
 
 ## Scanned Page PDF
 
-{{< pdf-file file="{{ .Params.pub_date }}-{{ .File.BaseFileName }}.pdf" >}}
+{{< pdf-file file="{{ .pub_date }}-{{ .File.BaseFileName }}.pdf" >}}
 
 ---
 
@@ -36,7 +36,7 @@ Paste the full transcribed text of the article here.
 
 > Example block quote from article text.
 
-Transcribed by {{ .Params.transcriber }}. Status: {{ .Params.transcription_status }}
+Transcribed by {{ .transcriber }}. Status: {{ .transcription_status }}
 
 ---
 
@@ -48,4 +48,4 @@ Add contextual or editorial notes here.
 
 ## Associated Image (optional)
 
-{{< figure src="/images/{{ .Params.pub_date }}/{{ .File.BaseFileName }}.webp" caption="Scan of the article" >}}
+{{< figure src="/images/{{ .pub_date }}/{{ .File.BaseFileName }}.webp" caption="Scan of the article" >}}
