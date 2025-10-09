@@ -1,4 +1,10 @@
-{{ $path := .Get 0 }}
-{{ $resolvedPath := $path | relURL }}
-<embed src="{{ $resolvedPath }}" type="application/pdf" width="100%" height="600px" />
-<p><a href="{{ $resolvedPath }}" target="_blank">Download PDF</a></p>
+{{ $file := .Get "file" }}
+{{ if $file }}
+  <div class="pdf-viewer">
+    <iframe src="/pdf/{{ $file }}" width="100%" height="1000px" style="border:none;">
+    </iframe>
+    <p><a href="/pdf/{{ $file }}">Download PDF</a></p>
+  </div>
+{{ else }}
+  <p><em>No PDF file specified.</em></p>
+{{ end }}
