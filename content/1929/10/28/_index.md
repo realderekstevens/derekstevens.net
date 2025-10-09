@@ -9,8 +9,3 @@ tags: ["historical", "newspaper-edition"]
 categories: ["Newspaper Dates"]
 type: "newspaper-index"
 ---
-
-## Articles
-{{< list-content type="article" >}}
-
----
