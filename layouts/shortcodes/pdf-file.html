@@ -1,23 +1,4 @@
-{{/* Shortcode usage:
-   {{< pdf-file file="1929/10/28/frontpage.pdf" >}}
-   or
-   {{< pdf-file file="example.pdf" >}}
-*/}}
-
-{{ $file := .Get "file" }}
-{{ if $file }}
-  {{ $resolvedPath := $file | relURL }}
-  <div class="pdf-viewer" style="margin: 1em 0;">
-    <iframe
-      src="{{ $resolvedPath }}"
-      width="100%"
-      height="800px"
-      style="border: none;"
-    ></iframe>
-    <p style="text-align:center; margin-top:0.5em;">
-      <a href="{{ $resolvedPath }}" target="_blank">Download PDF</a>
-    </p>
-  </div>
-{{ else }}
-  <p><em>No PDF file specified.</em></p>
-{{ end }}
+{{ $path := .Get 0 }}
+{{ $resolvedPath := $path | relURL }}
+<embed src="{{ $resolvedPath }}" type="application/pdf" width="100%" height="600px" />
+<p><a href="{{ $resolvedPath }}" target="_blank">Download PDF</a></p>
