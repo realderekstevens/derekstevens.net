@@ -1,5 +1,5 @@
 +++
-title = '04/12'
+title = 'April'
 date = 2023-10-28T16:33:45-07:00
 draft = false
 tags = ['1861', 'April', 'Civil War']
@@ -10,11 +10,3 @@ bookCollapseSection = false
 bookComments = true
 bookSearchExclude = false
 +++
-
-{{< pdf-file "/pdf/1861-04-12-p1.pdf" >}}
-
-{{< pdf-file "/pdf/1861-04-12-p2.pdf" >}}
-
-{{< pdf-file "/pdf/1861-04-12-p3.pdf" >}}
-
-{{< pdf-file "/pdf/1861-04-12-p4.pdf" >}}
