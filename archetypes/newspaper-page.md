@@ -3,7 +3,7 @@ title: "Page {{ replace (replace .Name ".md" "") "-" " " }}"
 date: {{ .Date }}
 draft: true
 weight: 1
-pub_date: "{{ .Date. }}"
+pub_date: "{{ .Date }}"
 newspaper: "Newspaper Name"
 transcriber: "Your Name"
 tags: ["newspaper-page", "historical"]
