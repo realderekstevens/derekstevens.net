@@ -9,14 +9,14 @@ bookCollapseSection: true
 pub_date: "1929-10-28"  # Publication date of the newspaper (YYYY-MM-DD)
 newspaper: "The Evening Star"  # e.g., "The Evening Star"
 transcriber: "Derek Stevens"  # Credit for transcription
-pdf_file: "/static/pdf/2025/10/28/01.pdf"  # Path to the PDF in static/
+pdf_file: "/pdf/2025/10/28/01.pdf"  # Path to the PDF in static/
 
 tags: ["front-page", "historical", "newspaper"]
 categories: ["Newspaper Pages"]
 ---
+{{< pdf-file "/pdf/2025/10/28/01.pdf" >}}
 
 # 01 - Front Page
-
 This is the front page (or section) of the newspaper from [1929-10-28].
 
 ## Embedded PDF
