@@ -1,31 +1,26 @@
 ---
-title: "{{ replace .Name "-" " " | title }}"
-creation_date: {{ .Date }}
-last_edit_date: {{ .Date }}
-draft: false
-weight: 1
-bookFlatSection: false
-bookCollapseSection: true
-pub_date: "{{ now.Format "2006-01-02" }}"  # Publication date of the newspaper (YYYY-MM-DD)
-newspaper: "The Evening Star"  # e.g., "The Evening Star"
-transcriber: "Derek Stevens"  # Credit for transcription
-pdf_file: "/pdf/{{ title.Format "2006-01-02-01" }}.pdf"  # Path to the PDF in static/
-
-tags: ["front-page", "historical", "newspaper"]
+title: "{{ $pageNum := replace .BaseFileName ".md" "" }}{{ printf "Page %s" $pageNum }}"  # Dynamically sets title to 'Page XX' from filename (e.g., 14.md -> Page 14)
+date: {{ .Date }}
+draft: true
+weight: {{ $pageNumInt := int $pageNum }}{{ $pageNumInt }}  # Sets weight to page number for sorting (e.g., 14)
+pub_date: "{{ $dirParts := split .Dir "/" }}{{ printf "%s-%s-%s" (index $dirParts 1) (index $dirParts 2) (index $dirParts 3) }}"  # Extracts date from path (1929/10/28 -> 1929-10-28)
+newspaper: "Newspaper Name"  # e.g., "The Evening Star"
+transcriber: "Your Name"  # Transcription credit
+tags: ["newspaper-page", "historical"]
 categories: ["Newspaper Pages"]
 ---
 
-# {{ .Name }} - Front Page
+# {{ .Title }} - Newspaper Page
 
-This is the front page (or section) of the newspaper from [pub_date].
+This is page {{ $pageNum }} from {{ .Params.newspaper }} dated {{ .Params.pub_date }}.
 
 ## Embedded PDF
-{{</* figure src="[Library of Congress]" caption="PDF scan" */>}}
+{{</* pdf-file "{{ .Params.pub_date }}-{{ printf "%02d" $pageNumInt }}.pdf" */>}}  <!-- Dynamically sets to "1929-10-28-14.pdf" (with leading zero if needed) -->
+
+## Transcription or Summary
+Add full transcription, key excerpts, or summaries here.
 
 ## Associated Articles
-List links to child articles here (Hugo auto-generates menu, but manual for clarity):
-- [Article 1 Title](/{{ now.Format "2006-01-02" }}/article1/)
-- [Article 2 Title](/{{ now.Format "2006-01-02" }}/article2/)
+- [Article 1](/{{ .Params.pub_date }}/article-slug/)  # Manual links to articles in same folder; or use range if needed
 
-<!-- Add transcribed text or summaries from the front page here if needed. Child articles will appear in the sidebar menu due to bookCollapseSection. -->
-<!-- Note: After creation, replace [PUB_DATE_PLACEHOLDER] with the value from front matter 'pub_date', and [PDF_FILE_PLACEHOLDER] with 'pdf_file'. -->
+Transcribed by {{ .Params.transcriber }}.
