@@ -1,9 +1,9 @@
 {{ $file := .Get "file" }}
 {{ if $file }}
   <div class="pdf-viewer">
-    <iframe src="/pdf/{{ $file }}" width="100%" height="1000px" style="border:none;">
+    <iframe src="{{ $file }}" width="100%" height="1000px" style="border:none;">
     </iframe>
-    <p><a href="/pdf/{{ $file }}">Download PDF</a></p>
+    <p><a href="{{ $file }}">Download PDF</a></p>
   </div>
 {{ else }}
   <p><em>No PDF file specified.</em></p>
