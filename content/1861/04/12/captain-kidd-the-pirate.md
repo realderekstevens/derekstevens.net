@@ -2,22 +2,18 @@
 title: "Captain Kidd the Pirate"
 date: 2025-10-09
 draft: false
-weight: 10
-pub_date: "04-12-"
-newspaper: "Newspaper Name"
-author: "Original Author"
+weight: 1
+pub_date: "1861-04-12"
+newspaper: "Evening Star"
+author: "W. D. Wallach"
 transcriber: "Derek Stevens"
 transcription_status: "draft"
 source_url: ""
-original_page: "Page captain kidd the pirate"
+original_page: "1"
 continued_on: ""
 parent_page: "/1861/04/12/"
 tags: ["article", "historical", "newspaper"]
 categories: ["Newspaper Articles"]
----
-
-{{< pdf-file "1861-04-12-01.pdf" >}}
-
 ---
 
 # CAPTAIN KIDD, THE PIRATE.
