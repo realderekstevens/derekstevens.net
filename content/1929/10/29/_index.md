@@ -3,6 +3,8 @@ title = "29th"
 date = 2025-10-07
 draft = false
 tags = ["1929", "October", "Stock Market", "Black Monday"]
+bookCollapseSection = true
+weight = 29
 +++
 # Stock Market Crash - October 29, 1929
 
