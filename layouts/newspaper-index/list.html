@@ -1,0 +1,21 @@
+{{ define "main" }}
+<h1>{{ .Title }}</h1>
+<p><em>{{ .Params.newspaper }} — {{ .Params.pub_date }}</em></p>
+
+{{ .Content }}
+
+<section>
+  <h2>Articles</h2>
+  {{< list-content type="article" >}}
+</section>
+
+<section>
+  <h2>Pages</h2>
+  {{< list-content type="page" >}}
+</section>
+
+<section>
+  <h2>Stock Quotes</h2>
+  {{< list-content type="stocks" >}}
+</section>
+{{ end }}
