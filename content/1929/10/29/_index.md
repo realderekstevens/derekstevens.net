@@ -1,14 +1,10 @@
 +++
-title = "Stock Market Crash - October 28, 1929"
+title = "Stock Market Crash - October 29, 1929"
 date = 2025-10-07
 draft = false
 tags = ["1929", "October", "Stock Market", "Black Monday"]
 +++
 # Stock Market Crash - October 28, 1929
-
-{{< pdf-file "/pdf/1929-10-28-p1.pdf" >}}
-{{< pdf-file "/pdf/1929-10-28-p2.pdf" >}}
-{{< pdf-file "/pdf/1929-10-28-p3.pdf" >}}
 
 # STOCKS DEPRESSED IN BEARISH ATTACK
 ## Market Sags Again Under Heavy Selling Pressure. Leaders Hard Hit.
