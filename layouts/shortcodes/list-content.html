@@ -1,0 +1,11 @@
+{{- $type := .Get "type" -}}
+{{- $pages := where .Page.Pages "Params.type" $type -}}
+{{ if gt (len $pages) 0 }}
+<ul>
+  {{ range $pages.ByWeight }}
+  <li><a href="{{ .RelPermalink }}">{{ .Title }}</a> – {{ .Summary }}</li>
+  {{ end }}
+</ul>
+{{ else }}
+_No {{ $type }} entries found._
+{{ end }}
