@@ -17,10 +17,10 @@ categories: ["Newspaper Pages"]
 
 # {{ .Name }} - Front Page
 
-This is the front page (or section) of the newspaper from [PUB_DATE_PLACEHOLDER].
+This is the front page (or section) of the newspaper from [pub_date].
 
 ## Embedded PDF
-{{</* figure src="[PDF_FILE_PLACEHOLDER]" caption="PDF scan" */>}}
+{{</* figure src="[Library of Congress]" caption="PDF scan" */>}}
 
 ## Associated Articles
 List links to child articles here (Hugo auto-generates menu, but manual for clarity):
