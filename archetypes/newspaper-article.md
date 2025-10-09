@@ -18,20 +18,36 @@ categories: ["Newspaper Articles"]
 
 # {{ replace .Name "-" " " | title }}
 
-Originally published in {{ .newspaper }} on {{ $dirParts := split .Dir "/" }}{{ printf "%s-%s-%s" (index $dirParts 1) (index $dirParts 2) (index $dirParts 3) }} by {{ .author }}.
+Originally published in **{{ "<Newspaper Name>" }}** on **{{ $dirParts := split .Dir "/" }}{{ printf "%s-%s-%s" (index $dirParts 1) (index $dirParts 2) (index $dirParts 3) }}** by **{{ "<Author>" }}**.
 
 ## Back to Parent Page
+
 [Return to Date Overview]({{ printf "/%s/%s/%s/" (index (split .Dir "/") 1) (index (split .Dir "/") 2) (index (split .Dir "/") 3) }})
 
+---
+
+## Scanned Page PDF
+
+{{< pdf-file "{{ printf "%s-%s-%s-%s.pdf" (index (split .Dir "/") 1) (index (split .Dir "/") 2) (index (split .Dir "/") 3) .BaseFileName }}" >}}
+
+---
+
 ## Transcription
+
 Paste the full transcribed text of the article here.
 
 > Block quote from the article here.
 
-Transcribed by {{ .transcriber }}. Status: {{ .transcription_status }}
+Transcribed by {{ "<Your Name>" }}. Status: {{ "<draft | partial | complete>" }}
+
+---
 
 ## Notes
+
 Add transcription notes, context, or issues encountered.
 
-## Associated Image (if available)
+---
+
+## Associated Image (optional)
+
 {{</* figure src="/images/{{ printf "%s-%s-%s" (index (split .Dir "/") 1) (index (split .Dir "/") 2) (index (split .Dir "/") 3) }}/{{ replace .Name "-" "_" | lower }}.webp" caption="Scan of the article" */>}}
