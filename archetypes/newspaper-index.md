@@ -4,7 +4,7 @@ date: {{ .Date }}
 draft: false
 weight: 1
 newspaper: "Newspaper Name"
-pub_date: "{{ now.Format "2006-01-02" }}"
+pub_date: "{{ .Date }}"
 tags: ["historical", "newspaper-edition"]
 categories: ["Newspaper Dates"]
 type: "newspaper-index"
