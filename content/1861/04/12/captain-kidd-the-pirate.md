@@ -11,7 +11,7 @@ transcription_status: "draft"
 source_url: ""
 original_page: "Page captain kidd the pirate"
 continued_on: ""
-parent_page: "/04/12//"
+parent_page: "/1861/04/12/"
 tags: ["article", "historical", "newspaper"]
 categories: ["Newspaper Articles"]
 ---
@@ -22,13 +22,13 @@ Originally published in **<Newspaper Name>** on **04-12-** by **<Author>**.
 
 ## Back to Parent Page
 
-[Return to Date Overview](/04/12//)
+[Return to Date Overview](/1861/04/12/)
 
 ---
 
 ## Scanned Page PDF
 
-{{< pdf-file "04-12--captain-kidd-the-pirate.pdf" >}}
+{{< pdf-file "1861-04-12-01.pdf" >}}
 
 ---
 
@@ -40,7 +40,7 @@ Some years before, while the war was still raging, there had been loud complaint
 
 In 1695 Richard Coote, Earl of Bellamont, an Irish peer who sat in the English House of Commons, was appointed Governor of New York and Massachusetts. He was a man of eminetly fair character, upright, courageous and independent. Though a decided whig, he had distinguished himself by bringing before the Parliament at Westminster some tyrannical acts done by whigs at Dublin, and particularly the execution, if it is not rather to be called the murder, of Gafney. Before Bellamont sailed for America, William spoke strongly to him about the freebooting which was the disgrace of the colonies. "I send you, my lord, to New York," he said, "because an honest and intrepid man is wanted to put these abuses down, and because I believe you to be such a man." Bellamont exerted himself to justify the high opinion which the king had formed of him. It was soon known at New York that the Governor who had just arrived from England was bent on the suppression of piracy, and some colonists in whom he place great confidence suggested to him what they may perhaps have thought the best mode of attaining that object.
 
-Transcribed by <Your Nam>. Status: <draft | partial | complete>
+Transcribed by <transcriber>. Status: <draft | partial | complete>
 
 ---
 
