@@ -4,15 +4,15 @@ date: {{ .Date }}
 draft: false
 weight: 1
 newspaper: "Newspaper Name"
-pub_date: "{{ .Date.Format "2006-01-02" }}"
+pub_date: "{{ now.Format "2006-01-02" }}"
 tags: ["historical", "newspaper-edition"]
 categories: ["Newspaper Dates"]
 type: "newspaper-index"
 ---
 
-# {{ .Title }}
+# {{ replace .Name "-" " " | title }} - Newspaper Edition
 
-Transcriptions and pages from **{{ .Params.newspaper }}** on **{{ .Params.pub_date }}**.
+Transcriptions and pages from **Newspaper Name** on **{{ now.Format "2006-01-02" }}**.
 
 ---
 
