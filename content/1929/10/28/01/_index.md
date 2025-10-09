@@ -1,5 +1,5 @@
 ---
-title: "01"
+title: "Page 1"
 creation_date: 2025-10-08T23:28:39Z
 last_edit_date: 2025-10-08T23:28:39Z
 draft: false
@@ -9,7 +9,7 @@ bookCollapseSection: true
 pub_date: "1929-10-28"  # Publication date of the newspaper (YYYY-MM-DD)
 newspaper: "The Evening Star"  # e.g., "The Evening Star"
 transcriber: "Derek Stevens"  # Credit for transcription
-pdf_file: "/pdf/1929/10/28/01.pdf"  # Path to the PDF in static/
+pdf_file: "/pdf/1929-10-28-01.pdf"  # Path to the PDF in static/
 
 tags: ["front-page", "historical", "newspaper"]
 categories: ["Newspaper Pages"]
