@@ -16,7 +16,7 @@ type: "page"
 This is a scanned page from **Newspaper Name** on **{{ .Date }}**.
 
 ## Embedded PDF
-{{< pdf-file file="{{ .Date }}-{{ printf "%02d" .weight }}.pdf" >}}
+{{< pdf-file file="2025-10-09-01.pdf" >}}
 
 ## Transcription or Summary
 Add the full transcription, summary, or key excerpts here.
