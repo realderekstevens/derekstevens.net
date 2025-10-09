@@ -13,12 +13,12 @@ type: "page"
 
 # {{ replace (replace .Name ".md" "") "-" " " }}
 
-This is a scanned page from **{{ .Params.newspaper }}** on **{{ .Params.pub_date }}**.
+This is a scanned page from **Newspaper Name** on **{{ .Date }}**.
 
 ## Embedded PDF
-{{< pdf-file file="{{ .Params.pub_date }}-{{ printf "%02d" .Params.weight }}.pdf" >}}
+{{< pdf-file file="{{ .Date }}-{{ printf "%02d" .Params.weight }}.pdf" >}}
 
 ## Transcription or Summary
 Add the full transcription, summary, or key excerpts here.
 
-Transcribed by {{ .Params.transcriber }}.
+Transcribed by Your Name.
