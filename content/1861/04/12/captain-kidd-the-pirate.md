@@ -16,12 +16,6 @@ tags: ["article", "historical", "newspaper"]
 categories: ["Newspaper Articles"]
 ---
 
-## Back to Parent Page
-
-[Return to Date Overview](/1861/04/12/)
-
----
-
 {{< pdf-file "1861-04-12-01.pdf" >}}
 
 ---
