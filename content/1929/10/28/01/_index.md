@@ -14,7 +14,7 @@ pdf_file: "/pdf/1929/10/28/01.pdf"  # Path to the PDF in static/
 tags: ["front-page", "historical", "newspaper"]
 categories: ["Newspaper Pages"]
 ---
-{{< pdf-file "/pdf/1929/10/28/01.pdf" >}}
+{{< pdf-file "/pdf/1929-10-28-01.pdf" >}}
 
 # 01 - Front Page
 This is the front page (or section) of the newspaper from [1929-10-28].
