@@ -16,7 +16,7 @@ categories: ["Newspaper Articles"]
 type: "article"
 ---
 
-# {{ .Title }}
+# {{ replace .Name "-" " " | title }}
 
 Originally published in **{{ .Params.newspaper }}** on **{{ .Params.pub_date }}**.
 
