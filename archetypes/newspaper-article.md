@@ -1,34 +1,32 @@
 ---
 title: "{{ replace .Name "-" " " | title }}"
-date: {{ .Date | time.Format "2006-01-02" }}
+date: {{ .Date }}
 draft: false
 weight: 10
-pub_date: "{{ $dirParts := split .Dir "/" }}{{ printf "%s-%s-%s" (index $dirParts 1) (index $dirParts 2) (index $dirParts 3) }}"
+pub_date: "{{ .Date.Format "2006-01-02" }}"
 newspaper: "Newspaper Name"
 author: "Original Author"
 transcriber: "Your Name"
 transcription_status: "draft"
 source_url: ""
-original_page: "Page {{ replace (replace .BaseFileName "-" " ") "_" " " }}"
+original_page: ""
 continued_on: ""
-parent_page: "/{{ $dirParts := split .Dir "/" }}{{ printf "%s/%s/%s/" (index $dirParts 1) (index $dirParts 2) (index $dirParts 3) }}"
 tags: ["article", "historical", "newspaper"]
 categories: ["Newspaper Articles"]
+type: "article"
 ---
 
-# {{ replace .Name "-" " " | title }}
+# {{ .Title }}
 
-Originally published in **{{ "<Newspaper Name>" }}** on **{{ $dirParts := split .Dir "/" }}{{ printf "%s-%s-%s" (index $dirParts 1) (index $dirParts 2) (index $dirParts 3) }}** by **{{ "<Author>" }}**.
+Originally published in **{{ .Params.newspaper }}** on **{{ .Params.pub_date }}**.
 
-## Back to Parent Page
-
-[Return to Date Overview]({{ printf "/%s/%s/%s/" (index (split .Dir "/") 1) (index (split .Dir "/") 2) (index (split .Dir "/") 3) }})
+[Return to Edition Overview](../)
 
 ---
 
 ## Scanned Page PDF
 
-{{< pdf-file "{{ printf "%s-%s-%s-%s.pdf" (index (split .Dir "/") 1) (index (split .Dir "/") 2) (index (split .Dir "/") 3) .BaseFileName }}" >}}
+{{< pdf-file file="{{ .Params.pub_date }}-{{ .File.BaseFileName }}.pdf" >}}
 
 ---
 
@@ -36,18 +34,18 @@ Originally published in **{{ "<Newspaper Name>" }}** on **{{ $dirParts := split 
 
 Paste the full transcribed text of the article here.
 
-> Block quote from the article here.
+> Example block quote from article text.
 
-Transcribed by {{ "<Your Name>" }}. Status: {{ "<draft | partial | complete>" }}
+Transcribed by {{ .Params.transcriber }}. Status: {{ .Params.transcription_status }}
 
 ---
 
 ## Notes
 
-Add transcription notes, context, or issues encountered.
+Add contextual or editorial notes here.
 
 ---
 
 ## Associated Image (optional)
 
-{{</* figure src="/images/{{ printf "%s-%s-%s" (index (split .Dir "/") 1) (index (split .Dir "/") 2) (index (split .Dir "/") 3) }}/{{ replace .Name "-" "_" | lower }}.webp" caption="Scan of the article" */>}}
+{{< figure src="/images/{{ .Params.pub_date }}/{{ .File.BaseFileName }}.webp" caption="Scan of the article" >}}
