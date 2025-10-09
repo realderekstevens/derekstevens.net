@@ -7,15 +7,15 @@ weight: 1
 bookFlatSection: false
 bookCollapseSection: true
 pub_date: "{{ now.Format "2006-01-02" }}"  # Publication date of the newspaper (YYYY-MM-DD)
-newspaper: "Newspaper Name"  # e.g., "The Evening Star"
-transcriber: "Your Name"  # Credit for transcription
-pdf_file: "/images/{{ now.Format "2006/01/02" }}/front-page.pdf"  # Path to the PDF in static/
+newspaper: "The Evening Star"  # e.g., "The Evening Star"
+transcriber: "Derek Stevens"  # Credit for transcription
+pdf_file: "/pdf/{{ title.Format "2006-01-02-01" }}.pdf"  # Path to the PDF in static/
 
 tags: ["front-page", "historical", "newspaper"]
 categories: ["Newspaper Pages"]
 ---
 
-# {{ replace .Name "-" " " | title }} - Front Page
+# {{ .Name }} - Front Page
 
 This is the front page (or section) of the newspaper from [PUB_DATE_PLACEHOLDER].
 
@@ -24,8 +24,8 @@ This is the front page (or section) of the newspaper from [PUB_DATE_PLACEHOLDER]
 
 ## Associated Articles
 List links to child articles here (Hugo auto-generates menu, but manual for clarity):
-- [Article 1 Title](/{{ now.Format "2006/01/02" }}/article1/)
-- [Article 2 Title](/{{ now.Format "2006/01/02" }}/article2/)
+- [Article 1 Title](/{{ now.Format "2006-01-02" }}/article1/)
+- [Article 2 Title](/{{ now.Format "2006-01-02" }}/article2/)
 
 <!-- Add transcribed text or summaries from the front page here if needed. Child articles will appear in the sidebar menu due to bookCollapseSection. -->
 <!-- Note: After creation, replace [PUB_DATE_PLACEHOLDER] with the value from front matter 'pub_date', and [PDF_FILE_PLACEHOLDER] with 'pdf_file'. -->
