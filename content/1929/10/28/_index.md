@@ -1,5 +1,5 @@
 +++
-title = 'October 28th'
+title = '28th'
 weight = 28
 bookCollapseSection = true
 +++
