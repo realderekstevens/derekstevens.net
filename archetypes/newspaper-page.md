@@ -1,26 +1,24 @@
 ---
-title: "{{ $pageNum := replace .BaseFileName ".md" "" }}{{ printf "Page %s" $pageNum }}"  # Dynamically sets title to 'Page XX' from filename (e.g., 14.md -> Page 14)
+title: "Page {{ replace (replace .Name ".md" "") "-" " " }}"
 date: {{ .Date }}
 draft: true
-weight: {{ $pageNumInt := int $pageNum }}{{ $pageNumInt }}  # Sets weight to page number for sorting (e.g., 14)
-pub_date: "{{ $dirParts := split .Dir "/" }}{{ printf "%s-%s-%s" (index $dirParts 1) (index $dirParts 2) (index $dirParts 3) }}"  # Extracts date from path (1929/10/28 -> 1929-10-28)
-newspaper: "Newspaper Name"  # e.g., "The Evening Star"
-transcriber: "Your Name"  # Transcription credit
+weight: 1
+pub_date: "{{ .Date.Format "2006-01-02" }}"
+newspaper: "Newspaper Name"
+transcriber: "Your Name"
 tags: ["newspaper-page", "historical"]
 categories: ["Newspaper Pages"]
+type: "page"
 ---
 
-# {{ .Title }} - Newspaper Page
+# {{ .Title }}
 
-This is page {{ $pageNum }} from {{ .Params.newspaper }} dated {{ .Params.pub_date }}.
+This is a scanned page from **{{ .Params.newspaper }}** on **{{ .Params.pub_date }}**.
 
 ## Embedded PDF
-{{</* pdf-file "{{ .Params.pub_date }}-{{ printf "%02d" $pageNumInt }}.pdf" */>}}  <!-- Dynamically sets to "1929-10-28-14.pdf" (with leading zero if needed) -->
+{{< pdf-file file="{{ .Params.pub_date }}-{{ printf "%02d" .Params.weight }}.pdf" >}}
 
 ## Transcription or Summary
-Add full transcription, key excerpts, or summaries here.
-
-## Associated Articles
-- [Article 1](/{{ .Params.pub_date }}/article-slug/)  # Manual links to articles in same folder; or use range if needed
+Add the full transcription, summary, or key excerpts here.
 
 Transcribed by {{ .Params.transcriber }}.
