@@ -8,5 +8,5 @@ pub_date: "1929-10-28"
 tags: ["historical", "newspaper-edition"]
 categories: ["Newspaper Dates"]
 type: "newspaper-index"
-bookCollapseSection = true
+bookCollapseSection: true
 ---
