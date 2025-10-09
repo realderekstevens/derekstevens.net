@@ -1,0 +1,6 @@
+{{ $src := .Get "src" }}
+{{ $caption := .Get "caption" }}
+<figure>
+  <img src="{{ $src | relURL }}" alt="{{ $caption }}">
+  {{ if $caption }}<figcaption>{{ $caption }}</figcaption>{{ end }}
+</figure>
