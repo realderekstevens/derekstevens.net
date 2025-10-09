@@ -1,22 +1,20 @@
-{{ $file := .Get "file" }}
-{{ $format := .Get "format" | default "csv" }}
+{{ $file := .Get "file" | default "example.csv" }}
+{{ $key := replace $file ".csv" "" }}
+{{ $data := index site.Data.csv $key }}
 
-{{ if eq $format "csv" }}
-  {{ $data := index site.Data.csv (replace $file ".csv" "") }}
-  {{ if $data }}
+{{ if $data }}
   <table>
-    <thead><tr>
-      {{ range (index $data 0) }}<th>{{ . }}</th>{{ end }}
-    </tr></thead>
+    <thead>
+      <tr>
+        {{ range (index $data 0) }}<th>{{ . }}</th>{{ end }}
+      </tr>
+    </thead>
     <tbody>
       {{ range (after 1 $data) }}
         <tr>{{ range . }}<td>{{ . }}</td>{{ end }}</tr>
       {{ end }}
     </tbody>
   </table>
-  {{ else }}
-  <p>No CSV data found for {{ $file }}</p>
-  {{ end }}
 {{ else }}
-  <p>[Manual stock data to go here]</p>
+  <p>No stock data found for {{ $file }}.</p>
 {{ end }}
