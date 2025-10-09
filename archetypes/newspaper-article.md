@@ -3,7 +3,7 @@ title: "{{ replace .Name "-" " " | title }}"
 date: {{ .Date }}
 draft: false
 weight: 10
-pub_date: "{{ .Date.Format "2006-01-02" }}"
+pub_date: "{{ .Date }}"   # ✅ remove .Format — Hugo inserts correct string
 newspaper: "Newspaper Name"
 author: "Original Author"
 transcriber: "Your Name"
