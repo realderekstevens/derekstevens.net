@@ -1,5 +1,5 @@
 ---
-title: "Page {{ replace (replace .Name ".md" "") "-" " " }}"
+title: "{{ replace (replace .Name ".md" "") "-" " " }}"
 date: {{ .Date }}
 draft: true
 weight: 1
@@ -11,7 +11,7 @@ categories: ["Newspaper Pages"]
 type: "page"
 ---
 
-# {{ .Title }}
+# {{ replace (replace .Name ".md" "") "-" " " }}
 
 This is a scanned page from **{{ .Params.newspaper }}** on **{{ .Params.pub_date }}**.
 
