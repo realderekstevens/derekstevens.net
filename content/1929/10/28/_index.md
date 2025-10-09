@@ -13,7 +13,4 @@ type: "newspaper-index"
 ## Articles
 {{< list-content type="article" >}}
 
-## Pages
-{{< list-content type="page" >}}
-
 ---
