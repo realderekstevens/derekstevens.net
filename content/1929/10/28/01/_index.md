@@ -5,7 +5,6 @@ last_edit_date: 2025-10-08T23:28:39Z
 draft: false
 weight: 1
 bookFlatSection: false
-bookCollapseSection: true
 pub_date: "1929-10-28"  # Publication date of the newspaper (YYYY-MM-DD)
 newspaper: "The Evening Star"  # e.g., "The Evening Star"
 transcriber: "Derek Stevens"  # Credit for transcription
